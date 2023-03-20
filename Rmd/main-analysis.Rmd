@@ -1,0 +1,241 @@
+---
+  title: "Psychometric Network Analysis of Taste Schemas"
+  author: "Omar Lizardo"
+  date: "`r Sys.Date()`"
+  output:
+    html_document: default
+---
+
+```{r setup, include=FALSE}
+    knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)    
+    require(tidyverse)
+    require(ggridges)
+    require(haven)
+    require(corclass)
+    require(qgraph)
+    require(EGAnet)
+    require(Hmisc)
+    require(patchwork)
+```
+
+```{r data wrangling and imputation}
+      set.seed(1234)
+      num <- function(x) {
+       as.numeric(x)
+        }
+      taste.dat <-  read_dta("C:/Users/Omar Lizardo/Google Drive/MISC DATA SOURCES/SSI-2012/SSI2012.dta") %>% 
+      select(ends_with("taste"), -c("altertaste", "rtaste")) %>% 
+      type.convert(as.is = TRUE)  %>% 
+      mutate(across(ends_with("taste"), recode,  `1` = "3", `2` = "1", `3` = "2", `4` = "NA")) %>% 
+      mutate(across(ends_with("taste"), as.integer))
+      imp.res <- aregImpute(~ classicaltaste + operataste + jazztaste + bwaysttaste + moodeztaste + bbandtaste +
+                                 croldtaste + countrytaste + bluegtaste + folktaste + hymgostaste + latspsaltaste +
+                                 raphiphoptaste + blurbtaste + reggaetaste + toppoptaste + controcktaste + 
+                                 indalttaste + danclubtaste + hvymtltaste, 
+                                 data = taste.dat, n.impute = 1, nk = 0)
+      taste.dat.i <- as.tibble(impute.transcan(imp.res, data=taste.dat, imputation = 1, list.out = TRUE, pr = FALSE, check = FALSE))
+      attr(taste.dat.i, "imputed") <- NULL
+      taste.dat.i <- taste.dat.i %>% 
+        rowwise() %>%
+        mutate(taste.sd = sd(c_across(classicaltaste:hvymtltaste))) %>% 
+        filter(taste.sd != 0) %>% 
+        select(-taste.sd)
+      taste.dat.nm <- taste.dat %>% 
+        na.omit() %>% 
+        rowwise() %>%
+        mutate(taste.sd = sd(c_across(classicaltaste:hvymtltaste))) %>% 
+        filter(taste.sd != 0) %>% 
+        select(-taste.sd)
+```
+```{r factor analysis plot, fig,width = 10}
+    f1 <- c(12, 13, 14, 15, 19)
+    f2 <- c(1, 2, 3, 4, 5, 6, 11)
+    f3 <- c(7, 16, 17, 18, 20)
+    f4 <- c(8, 9, 10)
+    gen.groups <- list(f1, f2, f3, f4)
+    efa.res <- factanal(taste.dat.i,factors = 4, rotation="promax")
+    windows(width = 10, height = 6, rescale = "fit")
+    fa <- qgraph(efa.res$loadings, 
+           node.width = c(rep(1, 20), rep(1.5, 4)),
+           label.scale = FALSE, label.cex = 0.8,
+           groups = gen.groups, borders = FALSE, 
+           edge.labels = TRUE, minimum = 0.1, 
+           edge.label.cex = 0.8, edge.width = 0.8, theme = "colorblind",
+           labels = c("Classical", "Opera", "Jazz", "Broadway", "Easy", "Big Band", "Classic.Rock", "Country", "Blueg.", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", "Pop", "Cont.Rock", "Alt.Rock", "Dance", "Metal"))
+    savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/efa.png", type = "png")    
+```
+
+```{r schematic class analysis with imputed values}
+      cca.res <- cca(taste.dat.i, filter.value = 0.01)
+      taste.dat.c <- bind_cols(cca.res$membership, taste.dat.i) 
+      names(taste.dat.c) <- c("Class", "Classical", "Opera", "Jazz", "Broadway", "Easy", "Big Band", "Classic.Rock", "Country", "Blueg.", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", "Pop", "Contemp.Rock", "Alt.Rock", "Dance", "Metal")
+```
+
+```{r making class-specific data tables}
+    dat1 <- filter(taste.dat.c, Class == 1)
+    dat1 <- select(dat1, -"Class")
+    dat2 <- filter(taste.dat.c, Class == 2)
+    dat2 <- select(dat2, -"Class")
+    dat3 <- filter(taste.dat.c, Class == 3)
+    dat3 <- select(dat3, -"Class")
+    dat4 <- filter(taste.dat.c, Class == 4)
+    dat4 <- select(dat4, -"Class")
+    dat5 <- filter(taste.dat.c, Class == 5)
+    dat5 <- select(dat5, -"Class")
+```
+
+```{r making point and line plots}
+      dat <- select(taste.dat.c, -"Class")
+      p.all <- EGA(dat)
+      p1 <- EGA(dat1)
+      p2 <- EGA(dat2)
+      p3 <- EGA(dat3)
+      p4 <- EGA(dat4)
+      p5 <- EGA(dat5)
+```
+
+```{r saving correlation point and line plots}
+      windows(width = 10, height = 10, rescale = "fit")
+      plot(p.all, plot.args = list(vsize = 22, label.size = 6, alpha = 1)) + theme(legend.position = "none")
+      savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/corr_all.png", type = "png")
+      windows(width = 10, height = 10, rescale = "fit")
+      plot(p1, plot.args = list(vsize = 22, label.size = 6, alpha = 1)) + theme(legend.position = "none")
+      savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/corr1.png", type = "png")
+      windows(width = 10, height = 10, rescale = "fit")
+      plot(p2, plot.args = list(vsize = 22, label.size = 6, alpha = 1)) + theme(legend.position = "none")
+      savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/corr2.png", type = "png")
+      windows(width = 10, height = 10, rescale = "fit")
+      plot(p3, plot.args = list(vsize = 22, label.size = 6, alpha = 1)) + theme(legend.position = "none")
+      savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/corr3.png", type = "png")
+      windows(width = 10, height = 10, rescale = "fit")
+      plot(p4, plot.args = list(vsize = 22, label.size = 6, alpha = 1)) + theme(legend.position = "none")
+      savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/corr4.png", type = "png")
+      windows(width = 10, height = 10, rescale = "fit")
+      plot(p5, plot.args = list(vsize = 22, label.size = 6, alpha = 1)) + theme(legend.position = "none")
+      savePlot("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/corr5.png", type = "png")
+      windows(width = 10, height = 10, rescale = "fit")
+```
+
+```{r data for centrality plots, message=FALSE}
+    c1 <- centralityTable(qgraph(cor_auto(dat1), DoNotPlot = TRUE, sampleSize = nrow(dat1)))
+    c2 <- centralityTable(qgraph(cor_auto(dat2), DoNotPlot = TRUE, sampleSize = nrow(dat2)))
+    c3 <- centralityTable(qgraph(cor_auto(dat3), DoNotPlot = TRUE, sampleSize = nrow(dat3)))
+    c4 <- centralityTable(qgraph(cor_auto(dat4), DoNotPlot = TRUE, sampleSize = nrow(dat4)))
+    c5 <- centralityTable(qgraph(cor_auto(dat5), DoNotPlot = TRUE, sampleSize = nrow(dat5)))
+
+    lab.names <- c("Classical", "Opera", "Jazz", "Broadway", "Easy", "Big Band", "Classic.Rock", "Country", "Blueg.", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", "Pop", "Contemp.Rock", "Alt.Rock", "Dance", "Metal")
+    mes.names <- c(rep("2. Betweenness", 20), rep("3. Closeness", 20), rep("1. Strength", 20), rep("4. Exp. Inf.", 20))
+    c1$node <- lab.names
+    c2$node <- lab.names
+    c3$node <- lab.names
+    c4$node <- lab.names
+    c5$node <- lab.names
+    c1$measure <- mes.names
+    c2$measure <- mes.names
+    c3$measure <- mes.names
+    c4$measure <- mes.names
+    c5$measure <- mes.names
+    c1 <- c1 %>% 
+      select(3:5) %>% 
+      filter(measure != "4. Exp. Inf.")
+    c2 <- c2 %>% 
+      select(3:5) %>% 
+      filter(measure != "4. Exp. Inf.")
+    c3 <- c3 %>% 
+      select(3:5) %>% 
+      filter(measure != "4. Exp. Inf.")
+    c4 <- c4 %>% 
+      select(3:5) %>% 
+      filter(measure != "4. Exp. Inf.")
+    c5 <- c5 %>% 
+      select(3:5) %>% 
+      filter(measure != "4. Exp. Inf.")
+```
+
+```{r centrality plots}
+    p <- ggplot(data = c1, mapping = 
+                  aes(x = reorder(node, value), y = value, color = measure, group = 1))
+    p <- p + geom_line() + geom_point() + coord_flip()
+    p <- p + facet_grid( ~ measure) + labs(x = "", y = "", title = "Schema 1")
+    p1 <- p + theme_minimal() + theme(legend.position = "none")
+    
+    p <- ggplot(data = c2, mapping = 
+                  aes(x = reorder(node, value), y = value, color = measure, group = 1))
+    p <- p + geom_line() + geom_point() + coord_flip()
+    p <- p + facet_grid( ~ measure) + labs(x = "", y = "", title = "Schema 2")
+    p2 <- p + theme_minimal() + theme(legend.position = "none")
+    
+    p <- ggplot(data = c3, mapping = 
+                  aes(x = reorder(node, value), y = value, color = measure, group = 1))
+    p <- p + geom_line() + geom_point() + coord_flip()
+    p <- p + facet_grid( ~ measure) + labs(x = "", y = "", title = "Schema 3")
+    p3 <- p + theme_minimal() + theme(legend.position = "none")
+    
+    p <- ggplot(data = c4, mapping = 
+                  aes(x = reorder(node, value), y = value, color = measure, group = 1))
+    p <- p + geom_line() + geom_point() + coord_flip()
+    p <- p + facet_grid( ~ measure) + labs(x = "", y = "", title = "Schema 4")
+    p4 <- p + theme_minimal() + theme(legend.position = "none")
+    
+    p <- ggplot(data = c5, mapping = 
+                  aes(x = reorder(node, value), y = value, color = measure, group = 1))
+    p <- p + geom_line() + geom_point() + coord_flip()
+    p <- p + facet_grid( ~ measure) + labs(x = "", y = "", title = "Schema 5")
+    p5 <- p + theme_minimal() + theme(legend.position = "none")
+    wrap_plots(p1, p2, p3, p4, p5, nrow = 2)
+    ggsave("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/cent.png", width = 12, height = 7)
+```
+
+```{r}
+    taste.dat.l <- taste.dat.i %>% 
+        pivot_longer(
+        cols = c(1:20),
+        names_to = "genre",
+        values_to = "eval"
+        ) 
+    taste.dat.l1 <- dat1 %>% 
+        pivot_longer(
+        cols = c(1:20),
+        names_to = "genre",
+        values_to = "eval"
+        ) 
+    taste.dat.l2 <- dat2 %>% 
+        pivot_longer(
+        cols = c(1:20),
+        names_to = "genre",
+        values_to = "eval" 
+        ) 
+    taste.dat.l3 <- dat3 %>% 
+        pivot_longer(
+        cols = c(1:20),
+        names_to = "genre",
+        values_to = "eval"
+        ) 
+    taste.dat.l4 <- dat4 %>% 
+        pivot_longer(
+        cols = c(1:20),
+        names_to = "genre",
+        values_to = "eval"
+        ) 
+    taste.dat.l5 <- dat5 %>% 
+        pivot_longer(
+        cols = c(1:20),
+        names_to = "genre",
+        values_to = "eval"
+        ) 
+```
+
+```{r, fig.width=8, fig.height=7}
+    taste.dat.l$genre <- rep(lab.names, nrow(taste.dat.i))
+    ridg.all <- ggplot(taste.dat.l, aes(x = eval, y = reorder(genre, eval))) + geom_density_ridges2() + scale_x_continuous(breaks = 1:3, labels = c('Dislike','Mixed','Like')) + labs(x = "", y = "", title = "Full Sample")
+    ridg.1 <- ggplot(taste.dat.l1, aes(x = eval, y = reorder(genre, eval))) + geom_density_ridges2() + scale_x_continuous(breaks = 1:3, labels = c('Dislike','Mixed','Like')) + labs(x = "", y = "", title = "Schema 1")
+    ridg.2 <- ggplot(taste.dat.l2, aes(x = eval, y = reorder(genre, eval))) + geom_density_ridges2() + scale_x_continuous(breaks = 1:3, labels = c('Dislike','Mixed','Like')) + labs(x = "", y = "", title = "Schema 2")
+    ridg.3 <- ggplot(taste.dat.l3, aes(x = eval, y = reorder(genre, eval))) + geom_density_ridges2() + scale_x_continuous(breaks = 1:3, labels = c('Dislike','Mixed','Like')) + labs(x = "", y = "", title = "Schema 3")
+    ridg.4 <- ggplot(taste.dat.l4, aes(x = eval, y = reorder(genre, eval))) + geom_density_ridges2() + scale_x_continuous(breaks = 1:3, labels = c('Dislike','Mixed','Like')) + labs(x = "", y = "", title = "Schema 4")
+    ridg.5 <- ggplot(taste.dat.l5, aes(x = eval, y = reorder(genre, eval))) + geom_density_ridges2() + scale_x_continuous(breaks = 1:3, labels = c('Dislike','Mixed','Like')) + labs(x = "", y = "", title = "Schema 5")
+  ridg <- wrap_plots(ridg.1, ridg.2, ridg.3, ridg.4, ridg.5, nrow = 1) & theme_minimal()
+  ridg
+  ggsave("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/ridge.png", width = 16, height = 4)
+
+```
+

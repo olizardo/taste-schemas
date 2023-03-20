@@ -1,0 +1,241 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+  word_document: default
+---
+
+```{r loading packages, message=FALSE, warning=FALSE, paged.print=FALSE}
+    library(foreign)
+    library(tidyverse)
+    library(ggrepel)
+    library(networktools)
+    library(corclass)
+    library(Hmisc)
+    library(qgraph)
+    library(reshape2)
+    library(gtools)
+    library(gridExtra)
+    library(grid)
+```
+
+```{r getting behaavioral data}
+    lis.dat <-  read.dta("C:/Users/Omar Lizardo/Google Drive/MISC DATA SOURCES/SSI-2012/SSI2012.dta", convert.factors = FALSE)
+    lis.dat <- select(lis.dat, "id", ends_with("lis"), -(starts_with("none")))
+    names(lis.dat) <- c("id", "Classical", "Opera", "Jazz", "Broadway", "Easy", "BigBand", "ClassicRock", "Country",
+                   "Bluegrass", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", 
+                   "Pop", "ContRock", "Alt", "Dance", "Metal")
+    lis.dat <- na.omit(lis.dat)
+    lis.dat <- mutate(lis.dat, omni = rowSums(lis.dat[2:21])) 
+    names(lis.dat)
+```
+
+```{r getting and recoding data for multiple imputation}
+    taste.dat <-  read.dta("C:/Users/Omar Lizardo/Google Drive/MISC DATA SOURCES/SSI-2012/SSI2012.dta", convert.factors = FALSE)
+    taste.dat <- select(taste.dat, "id", ends_with("taste"), -c("altertaste", "rtaste"))
+    for(i in 2:21) {
+      taste.dat[which(taste.dat[, i] == 4), i] <- NA
+      taste.dat[which(taste.dat[, i] == 1), i] <- 30
+      taste.dat[which(taste.dat[, i] == 2), i] <- 10
+      taste.dat[which(taste.dat[, i] == 3), i] <- 20
+    }    
+    names(taste.dat) <- c("id", "Classical", "Opera", "Jazz", "Broadway", "Easy", "BigBand", "ClassicRock", "Country",
+                   "Bluegrass", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", 
+                   "Pop", "ContRock", "Alt", "Dance", "Metal")
+    nrow(taste.dat) 
+    taste.dat <- mutate(taste.dat, rsum = rowSums(is.na(taste.dat[2:21])))
+    taste.dat <- subset(taste.dat, rsum != 20) #dropping cases with all missing values
+    taste.dat <- taste.dat[, 1:21]
+    nrow(taste.dat)
+```
+
+```{r multiple imputation with Hmisc, message=FALSE, warning=FALSE, paged.print=FALSE}
+     set.seed(25)
+     mi <- aregImpute(formula = ~ Classical + Opera + Jazz + Broadway + Easy + BigBand + ClassicRock + Country +
+                      Bluegrass + Folk + Gospel + Latin + Rap + Blues + Reggae + Pop + ContRock + Alt + Dance + Metal,
+                      data = taste.dat, n.impute = 50, burnin = 3, nk = 0, type='pmm', pmmtype = 1
+                      )
+    for(i in 2:21) {
+      j <- i - 1
+      taste.dat[which(is.na(taste.dat[, i])), i] <- round(apply(mi$imputed[[j]], 1, mean), 0)
+      }  
+    taste.dat <- mutate(taste.dat, rowsd = apply(taste.dat[, 2:21], 1, sd))
+    taste.dat <- filter(taste.dat, rowsd != 0) #dropping cases with no variance in taste vector response
+    taste.dat <- taste.dat[, 1:21]
+```
+
+
+```{r}
+    dat <- taste.dat[, 2:21]
+    dat.names <- rownames(dat)
+    dat <- as.data.frame(t(dat))
+    names(dat) <- dat.names
+    dat[, 1:10]
+    cor <- abs(cor(dat))
+    #cor.res <- qgraph(cor, threshold = "sig", graph = "cor", alpha = 0.01, sampleSize = 20, plot = FALSE)
+```
+
+
+```{r correlational class analysis}
+    cca.res <- cca(taste.dat[, c(2:21)], filter.value = 0.01)
+    taste.dat <- data.frame(taste.dat, cca.res$membership)
+    names(taste.dat[,length(taste.dat)]) <- "classmem"
+    colnames(taste.dat)[colnames(taste.dat) == "cca.res.membership"] <- "classmem"
+```
+
+```{r number of genres by schematic class plot data prep}
+    lis.classmem <- merge(lis.dat, taste.dat[, c(1, length(taste.dat))], by = "id")
+    lis.classmem$omnicat <- recode(lis.classmem$omni, "2 = 1; 3 = 2; 4 = 2; 5 = 3; 6 = 3; 7 = 4; 8 = 4; 9:20 = 5")
+    lis.classmem <- lis.classmem %>%
+                    select(-c("id")) %>%
+                    filter(omni != 0) %>%
+                    group_by(classmem, omnicat) %>%
+                    summarise(count = n())  
+    n.class <- lis.classmem %>%
+               group_by(classmem)  %>%
+               summarise(classcount = sum(count))
+    lis.classmem <- lis.classmem %>% 
+                    merge(n.class, by = "classmem") %>% 
+                    mutate(prop = count / classcount) %>% 
+                    mutate(omnicat.f = factor(omnicat, labels = c("1-2", "3-4", "5-6", "7-8", "9+"))) %>% 
+                    mutate(classmem.f = factor(classmem, labels = 
+                          c("Anything but Country", "Anything but Heavy Metal", 
+                            "Contemporary-Traditional", "Omnivore-Univore", "Contempo-Folksy-Easy")))
+```
+
+```{r validation plot 1 data prep, message=FALSE, warning=FALSE}
+    taste.corr <- merge(taste.dat, lis.dat[, c(1, length(lis.dat))], by = "id")
+    genre <- rep(1:20, 5)
+    genre <- factor(genre, labels = names(taste.dat[,2:21]))
+    classmem <- c(rep(1,20), rep(2, 20), rep(3, 20), rep(4,20), rep(5, 20))
+    omni.corr <- rep(0, 20*5)
+    corr.dat <- data.frame(genre, classmem, omni.corr)
+    k <- 1
+    for (i in 1 : 5) {
+      dat <- subset(taste.corr, classmem == i)
+      for (j in 2 : 21) {
+        cor <- cor.test(dat[, j], dat$omni, method = "spearman")
+        corr.dat[k, 3] <- cor$estimate
+        k <- k + 1
+        }
+        
+      }
+    for (i in 1 : 5) {
+      out <- expectedInf(cor_auto(subset(taste.corr, classmem == i)[,2:21]))
+      if (i == 1) {
+        exp.inf <- scale(out$step1)
+      }
+      if (i > 1) {
+        exp.inf <- c(exp.inf, scale(out$step1))
+      }
+    }
+    corr.dat <- data.frame(corr.dat, exp.inf)
+    corr.dat$classmem <- factor(corr.dat$classmem, labels = c("Anything but Country", "Anything but Heavy Metal", "Contemporary-Traditional", 
+                                        "Omnivore-Univore", "Contempo-Folksy-Easy"))
+    for (i in seq(0, 100, by = 20)) {
+      if (i < 100) {
+        j <- i + 1
+        k <- i + 20
+        corr.dat$omni.corr[j:k] <- scale(corr.dat$omni.corr[j:k])
+      }
+    }
+    corr.dat <- mutate(corr.dat, classmem.f = factor(classmem, labels = 
+                          c("Anything but Country", "Anything but Heavy Metal", 
+                            "Contemporary-Traditional", "Omnivore-Univore", "Contempo-Folksy-Easy")))
+```
+
+```{r factor analysis plot}
+    windows(height = 12, width = 14)
+    f1 <- c(12, 13, 14, 15, 19)
+    f2 <- c(1, 2, 3, 4, 5, 6)
+    f3 <- c(7, 16, 17, 18, 20)
+    f4 <- c(8, 9, 10, 11)
+    gen.groups <- list(f1, f2, f3, f4)
+    plot.dat <- lis.dat[,2:21]
+    names(gen.groups) <- c("Afro.Pop", "Art", "Rock.Pop", "Folk")
+    qgraph.efa(cor_auto(plot.dat), 4, groups = gen.groups, rotation = "promax",
+              minimum = 0.2, cut = 0.4, vsize = c(4, 8),  edge.labels = TRUE, edge.label.cex = 0.5,
+              borders = FALSE, asize = 0.07, esize = 4, vTrans = 150, esize = 15
+              )
+    savePlot(filename = "C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/genre-behav-typology.png",
+             type = "png")
+```
+
+```{r correlation plots}
+    library(qgraph)
+    for (i in 1:5) {
+      x <- subset(taste.dat, classmem == i)[,c(2:21)]
+      windows(height = 10, width = 14)
+      qgraph(cor_auto(x), layout = "spring", 
+             labels = names(names(taste.dat[, 2:21])), repulsion = 1.15,
+             graph = "cor", sampleSize = nrow(x), 
+             alpha = 0.05, minimum = 0.05, threshold = "sig",
+             groups = gen.groups, palette = "ggplot2", 
+             legend = FALSE, esize = 15, 
+             posCol = "darkgray", borders = FALSE)
+      savePlot(filename = paste("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/taste-corrnet-class", 
+                                i, sep = ""), type = "png")
+      }
+```
+
+```{r expected influence plot, message=FALSE, warning=FALSE, paged.print=FALSE}
+    plot.dat <- subset(taste.dat, classmem == 1)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p1 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Anything (but Country)") + theme_minimal()
+    plot.dat <- subset(taste.dat, classmem == 2)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p2 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Anything (but Heavy Metal)") + theme_minimal()
+    plot.dat <- subset(taste.dat, classmem == 3)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p3 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Contemporary/Traditional") + theme_minimal()
+    plot.dat <- subset(taste.dat, classmem == 4)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p4 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Omnivore/Univore") + theme_minimal()
+    plot.dat <- subset(taste.dat, classmem == 5)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p5 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Contempo/Folksy/Easy") + theme_minimal()
+    windows(height = 4.5, width = 14)
+    grid.arrange(p1, p2, p3, p4, p5, ncol = 5)
+    savePlot(filename = "C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/taste-centrality-class.png",
+             type = "png")
+```
+
+```{r schema validation plot (faceted scattter)}
+    set.seed(25)
+    windows(height = 5, width = 12)
+    p <- ggplot(data = corr.dat, mapping = aes(x = exp.inf, y = omni.corr, color = classmem))
+    p <- p + geom_smooth(method = "lm", alpha = 0.15)
+    p <- p + geom_text_repel(aes(label = genre), size = 2, segment.alpha = 0)
+    p <- p + facet_wrap(~ classmem, ncol = 5)
+    p <- p + theme_classic() + geom_hline(yintercept = 0, color = "gray") + geom_vline(xintercept = 0, color = "gray")
+    p <- p + labs(x = " ", y = "")
+    p <- p + theme(legend.position = "none")
+    p
+    savePlot(filename = "C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/schema-validation1.png", type = "png")
+```
+
+```{r listening by schematic class plot}
+    windows(height = 12, width = 18)
+    p <- ggplot(data = lis.classmem, mapping = aes(x = omnicat.f, y = prop, color = classmem.f, group = classmem.f))
+    p <- p +  geom_line(size = 1.5) + geom_point(size = 8)
+    p <- p + theme_minimal() + theme(legend.position = "bottom", axis.text = element_text(size = 20), plot.title = element_text(size = 20), legend.title = element_blank(), legend.text = element_text(size = 16))
+    p <- p + scale_color_discrete(name = "Schematic Class") 
+    p <- p + labs(x = "", y = "") + ggtitle(" ")
+    p    
+    savePlot(filename = "C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/numlis-by-schematic-class.png"
+             , type = "png")
+```
+
+```{r Correlations in validation plot 1}
+    r <- c(rep(0, 5))
+    p <- c(rep(0, 5))
+    for (i in 1 : 5) {
+      dat <- filter(corr.dat, as.numeric(classmem) == i)
+      cor <- cor.test(dat$omni.corr, dat$exp.inf, method = "pearson")
+      r[i] <- cor$estimate
+      p[i] <- cor$p.value
+    }
+    plot.corrs <- data.frame(r, p)
+    round(plot.corrs, 2)
+```
