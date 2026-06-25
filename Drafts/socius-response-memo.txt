@@ -1,0 +1,13 @@
+Reviewer 1
+Foreshadow musical genre analysis a bit more
+The front portion of the paper is relatively abstract and barely makes reference to the genres, which are central to the analysis. It would help a generalist readership understand the results if the type of results we encounter were anticipated more in the front half. Put differently, we learn a fair amount about musical tastes from the results, but have very little preparation for it in the introduction/lit review.
+Reviewer 2
+Be more explicit about borrowings from Boutyline and Robinaugh et al.
+“Art/Pop/Folk” schema is probably misnamed
+The reviewer is definitely right about this, especially in the characterization of the schema as “things old people like.” This schema has an extremely right-skewed age distribution and thus is mostly composed of old people. Following the reviewer’s suggestion with regard to the tripartite distinction implied in the schema, I renamed to “Contempo/Folksy/Easy” and rewrote the relevant paragraph accordingly. 
+Clarify the Intuitions Behind the Expected Influence Measure
+Clarify the Validation Analysis
+Get Rid of Validation Analysis in the Previous Section 4.3.3
+Initially, I thought the reviewer was being a bit harsh, but after thinking about it I think the reviewer is absolutely right and there’s nothing here that you couldn't garner from the previous analysis (including the fact that there are different taste profiles among omnivores in each class which is evident the (now) Figure 3b. So gone are the previous figures 6 an 7a and 7b and associated discussion. This was definitely  a case of less being more. 
+Fix the Language in Section 1.3 and Elsewhere
+Rewrote the relevant sections sticking to the “observed/latent” distinction. Added language to increase clarity and provide a more intuitive characterization of the motivation and goals of the method.  Hope I was more successful this time. 

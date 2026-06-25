@@ -1,0 +1,139 @@
+---
+title: "R Notebook"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+
+```{r loading packages, message=FALSE, warning=FALSE, paged.print=FALSE}
+    library(haven)
+    library(tidyverse)
+    library(bootnet)
+    library(corclass)
+```
+```{r multiple imputation}
+    mydata <-  read_dta("C:/Users/Omar Lizardo/Google Drive/MISC DATA SOURCES/SSI-2012/SSI2012.dta")
+    music.dat <- mydata[,grep("*taste$", names(mydata))]
+    music.dat <- select(music.dat, ends_with("taste"))
+    music.dat <- music.dat[,c(1:20)]
+    music.dat[music.dat == 1] <- 3
+    music.dat[music.dat == 2] <- 1
+    music.dat[music.dat == 3] <- 2
+    music.dat[music.dat == 4] <- NA
+    names(music.dat) <- c("Classical", "Opera", "Jazz", "Broadway", "Easy", "Big Band", "Oldies", "Country",
+                   "Blueg.", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", 
+                   "Pop", "Rock", "Alt", "Dance", "Metal")
+    head(music.dat)
+```
+
+```{r getting and recoding data}
+    taste.dat <-  read_dta("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/dta/taste.dta")
+    taste.dat <- select(taste.dat, 1:21)
+    head(taste.dat)
+    lis.dat <-  read_dta("C:/Users/Omar Lizardo/Google Drive/MISC DATA SOURCES/SSI-2012/SSI2012.dta")
+    lis.dat <- select(lis.dat, "id", ends_with("lis"), -(starts_with("none")))
+    names(lis.dat) <- c("id", "Classical", "Opera", "Jazz", "Broadway", "Easy", "Big Band", "Oldies", "Country",
+                   "Blueg.", "Folk", "Gospel", "Latin", "Rap", "Blues", "Reggae", 
+                   "Pop", "Rock", "Alt", "Dance", "Metal")
+                   
+    names(lis.dat)
+```
+
+
+                   
+                   
+```{r correlational class analysis}
+    cca.res <- cca(taste.dat[, c(2:21)], filter.value = 0.01)
+    taste.dat <- data.frame(taste.dat, cca.res$membership)
+    names(taste.dat[,length(taste.dat)]) <- "classmem"
+    colnames(taste.dat)[colnames(taste.dat) == "cca.res.membership"] <- "classmem"
+```
+
+
+
+
+```{r correlation plots}
+    for (i in 1:5) {
+      x <- subset(taste.dat, classmem == i)[,c(2:21)]
+      windows(height = 14, width = 14)
+      qgraph(cor_auto(x), layout = "spring", 
+             labels = names(lis.dat), repulsion = 1.5,
+             graph = "cor", sampleSize = nrow(x), 
+             alpha = 0.01, minimum = 0.05, threshold = "sig",
+             groups = gen.groups, palette = "colorblind", 
+             legend = FALSE, esize = 15, 
+             posCol = "darkgray", borders = FALSE)
+      savePlot(filename = paste("C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/taste-corrnet-class", 
+                                i, sep = ""), type = "png")
+      }
+```
+
+```{r expected influence plot}
+    library(networktools)
+    library(gridExtra)
+    library(grid)
+    plot.dat <- filter(taste.dat, classmem == 1)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p1 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Anything (but Country)") + theme_minimal()
+    plot.dat <- filter(taste.dat, classmem == 2)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p2 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Anything (but Heavy Metal)") + theme_minimal()
+    plot.dat <- filter(taste.dat, classmem == 3)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p3 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Contemporary/Traditional") + theme_minimal()
+    plot.dat <- filter(taste.dat, classmem == 4)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p4 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Omnivore/Univore") + theme_minimal()
+    plot.dat <- filter(taste.dat, classmem == 5)
+    out1 <- expectedInf(cor_auto(plot.dat[,2:21]))
+    p5 <- plot(out1$step1, order="value", zscore=TRUE) + labs(title = "Contempo/Folksy/Easy") + theme_minimal()
+    windows(height = 5, width = 14)
+    grid.arrange(p1, p2, p3, p4, p5, ncol = 5)
+    savePlot(filename = "C:/Users/Omar Lizardo/Google Drive/WORK/IN PROGRESS/CULTURE/lizardo-taste-schemas/png/taste-centrality-class.png",
+             type = "png")
+```
+
+
+
+
+
+
+
+```{r}
+    lis.classmem <- merge(lis.dat, taste.dat[, c(1, length(taste.dat))], by = "id")
+    lis.classmem <- lis.classmem %>%  
+                    mutate(omni = rowSums(lis.classmem[2:21])) %>%  
+                    mutate(omnicat = 
+                             recode(omni, `0` = 1, `2` = 1, `3` = 2, `4` = 2, `5` = 3, `6` = 3, `7` = 4, `8` = 4, `9` = 5,
+                                    `10` = 5, `11` = 5, `12` = 5, `13` = 5, `14` = 5, `15` = 5, `16` = 5, `17` = 5,
+                                    `18` = 5, `19` = 5, `20` = 5
+                                    )
+                    ) %>%
+                    select(-c("id"))
+                    group_by(lis.classmem, classmem, omnicat)
+    
+    #lis.classmem <- mutate(lis.classmem, omni = rowSums(lis.classmem[2:21]))
+    #lis.classmem <- mutate(lis.classmem, omnicat = 
+                             #recode(omni, `0` = 1, `2` = 1, `3` = 2, `4` = 2, `5` = 3, `6` = 3, `7` = 4, `8` = 4, `9` = 5,
+                                   # `10` = 5, `11` = 5, `12` = 5, `13` = 5, `14` = 5, `15` = 5, `16` = 5, `17` = 5,
+                                   # `18` = 5, `19` = 5, `20` = 5
+                                   # )
+                          # )
+    lis.classmem <- select(lis.classmem, -c("id"))
+    lis.classmem <- group_by(lis.classmem, classmem, omnicat)
+    lis.classmem <- summarize(lis.classmem, count = n())
+    #lis.classmem <- summarise_at(lis.classmem, vars(Classical:Metal), mean, na.rm = TRUE)
+    lis.classmem
+```
+
+
+
+
+
+
+
