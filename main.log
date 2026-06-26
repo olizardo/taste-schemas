@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.23)  25 JUN 2026 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.23)  25 JUN 2026 19:06
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**"/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/taste-schemas/main.tex"
+(/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/taste-schemas/main.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
 (./elsarticle.cls
@@ -301,13 +302,13 @@ L3 programming layer <2026-06-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5459 strings out of 469158
- 89246 string characters out of 5459787
+ 5460 strings out of 469158
+ 89435 string characters out of 5459787
  509532 words of memory out of 5000000
  34411 multiletter control sequences out of 15000+600000
  637498 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,10n,79p,1561b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,10n,79p,1626b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
 Output written on main.pdf (16 pages, 1236935 bytes).
 PDF statistics:
