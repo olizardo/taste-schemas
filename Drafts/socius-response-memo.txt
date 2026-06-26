@@ -1,13 +1,47 @@
 Reviewer 1
+
 Foreshadow musical genre analysis a bit more
-The front portion of the paper is relatively abstract and barely makes reference to the genres, which are central to the analysis. It would help a generalist readership understand the results if the type of results we encounter were anticipated more in the front half. Put differently, we learn a fair amount about musical tastes from the results, but have very little preparation for it in the introduction/lit review.
+> The front portion of the paper is relatively abstract and barely makes reference to the genres, which are central to the analysis. It would help a generalist readership understand the results if the type of results we encounter were anticipated more in the front half. Put differently, we learn a fair amount about musical tastes from the results, but have very little preparation for it in the introduction/lit review.
+
+Response: I have revised the introduction and literature review sections to foreshadow the substantive focus on musical genres. I now introduce the specific genres analyzed and anticipate some of the key findings earlier in the text, ensuring that generalist readers are better prepared for the empirical results in the second half of the paper.
+
 Reviewer 2
+
 Be more explicit about borrowings from Boutyline and Robinaugh et al.
+Response: I completely agree with this assessment. I have extensively revised the theoretical and methodological sections to explicitly attribute the framework and terminology of CCA to Boutyline (2017) and the spreading activation model and validation design to Robinaugh et al. (2016). I have also added notes directing readers to these source texts for further details.
+
 “Art/Pop/Folk” schema is probably misnamed
-The reviewer is definitely right about this, especially in the characterization of the schema as “things old people like.” This schema has an extremely right-skewed age distribution and thus is mostly composed of old people. Following the reviewer’s suggestion with regard to the tripartite distinction implied in the schema, I renamed to “Contempo/Folksy/Easy” and rewrote the relevant paragraph accordingly. 
+Response: The reviewer is definitely right about this, especially in the characterization of the schema as “things old people like.” This schema has an extremely right-skewed age distribution and thus is mostly composed of old people. Following the reviewer’s suggestion with regard to the tripartite distinction implied in the schema, I renamed to “Contempo/Folksy/Easy” and rewrote the relevant paragraph accordingly. 
+
 Clarify the Intuitions Behind the Expected Influence Measure
+Response: I have rewritten this section to clearly introduce the "Expected Influence" (EI) measure as weighted degree centrality, citing Barrat et al. (2004). I explicitly attribute the "spreading activation" interpretation to Robinaugh et al. (2016). Following the reviewer's excellent suggestion, I explain the intuition behind spreading activation—where an increase in one node probabilistically causes an increase in positively tied nodes and a decrease in negatively tied nodes—which clarifies why EI is an appropriate measure of "influence."
+
 Clarify the Validation Analysis
+Response: I have completely rewritten the validation section to make the logic more transparent. As suggested, I now introduce Robinaugh et al.'s simulation study to provide context before moving to the empirical validation. I have simplified the sentence structure, removed excess jargon, and incorporated mathematical notation and clear variable names (e.g., predictiveness, importance) to clearly delineate the steps involved in linking network centrality to behavioral omnivorousness.
+
 Get Rid of Validation Analysis in the Previous Section 4.3.3
-Initially, I thought the reviewer was being a bit harsh, but after thinking about it I think the reviewer is absolutely right and there’s nothing here that you couldn't garner from the previous analysis (including the fact that there are different taste profiles among omnivores in each class which is evident the (now) Figure 3b. So gone are the previous figures 6 an 7a and 7b and associated discussion. This was definitely  a case of less being more. 
+Response: Initially, I thought the reviewer was being a bit harsh, but after thinking about it I think the reviewer is absolutely right and there’s nothing here that you couldn't garner from the previous analysis (including the fact that there are different taste profiles among omnivores in each class which is evident the (now) Figure 3b. So gone are the previous figures 6 an 7a and 7b and associated discussion. This was definitely a case of less being more. 
+
 Fix the Language in Section 1.3 and Elsewhere
-Rewrote the relevant sections sticking to the “observed/latent” distinction. Added language to increase clarity and provide a more intuitive characterization of the motivation and goals of the method.  Hope I was more successful this time. 
+Response: Rewrote the relevant sections sticking to the “observed/latent” distinction. Added language to increase clarity and provide a more intuitive characterization of the motivation and goals of the method. Hope I was more successful this time. 
+
+Correct Terminology: "Internal Validity" vs "Criterion Validity"
+Response: I thank the reviewer for catching this. I have corrected the terminology throughout the paper, replacing "internal validation" with "criterion validation" or "behavioral validation" when referring to the prediction of behavioral outcomes. I also fixed the footnote 1 citation to correctly reference Boutyline and Vaisey (2017) for the SEM goodness-of-fit test.
+
+Modulate Claims of "Strong Evidence" and "Spreading Activation" as Causal
+Response: I have tempered the language regarding the strength of the evidence, acknowledging that the behavioral outcomes are self-reported concurrently with the taste measures, which could introduce consistency bias. Furthermore, I have carefully revised the discussion to clarify that "spreading activation" is a highly useful methodological model for studying schemas, rather than a literal causal diagram of how tastes are formed.
+
+Acknowledge Prior Work on Network Analysis of Schemas
+Response: I have revised the claim regarding "eyeballing" networks to explicitly acknowledge that researchers like Goldberg (2011) have already used network techniques (such as the clustering coefficient) to examine schema networks, clarifying that the current paper builds upon this tradition.
+
+Align the Discussion with the Abstract and Front End
+Response: I have revised the Discussion section to better balance its focus. It now more comprehensively synthesizes the findings regarding the replication, the emergence of the new schemas, and the broader question of behavioral stability and cultural malleability introduced in the abstract, rather than focusing predominantly on the validation study.
+
+Correct Class Names and Genre Labels
+Response: For consistency, the class has been renamed to "Anything (but) Country or Rap." The genre label "Hip/Hop Rap" has been changed to "Hip Hop/Rap", and the use of the term "rap" vs. "hiphop" has been standardized to "rap" throughout both the text and the figures.
+
+Improve Figure Legibility
+Response: I have increased the font sizes and the overall dimensions of all network and ridge plot figures to ensure they are fully legible.
+
+Correct Typos
+Response: I have fixed all the specific typos identified by the reviewer (extra equals sign, rogue commas, "aren" to "are", "unlikely" to "unlike", and the garbled sentence regarding Goldberg 2011).

@@ -1,0 +1,361 @@
+%% This is file `elsarticle-template-1-num.tex',
+%%
+%% Copyright 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%%
+%% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
+%% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
+%%
+\documentclass[preprint,12pt]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% The graphicx package provides the includegraphics command.
+\usepackage{graphicx}
+\usepackage{subfig}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+\journal{Journal Name}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+\title{Schematic Logics and Patterns of Culture Choice: Linking Cognition and Action in the Sociology of Taste}
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author{Omar Lizardo and Sara Skiles}
+
+\address{University of Notre Dame}
+
+\begin{abstract}
+%% Text of abstract
+Research applying schematic class analysis to the omnivore-univore phenomenon has generally elided the distinction between schemata and behavior. Instead, researchers have tended to collapse the two by, for instance, reading behavioral choices (e.g. omnivorousness or univorousness) based exclusively on the pattern of correlation between genre evaluations shared by persons in the same schematic class. Yet the logic of schema theory suggests that the particular ways in which omnivorousness (or univorousness) is expressed behaviorally is only conditioned, but not determined, by a given taste schema. In this sense, schemas allow for distinct (and seemingly opposed) behavioral manifestations, yet, given limitations in extant data sources, this has yet to be empirically explored. To fill this gap in the literature, I integrate research on schematic class analysis with work on the ``varieties of omnivorousness (univorousness)'' literature, arguing that we should observe distinct manifestations of omnivorousness (univorousness) across different schematic classes. Using a novel data source containing information on both taste expression and behavioral choices, I show that different schematic classes display distinct forms of omnivorousness (univorousness), that are not completely predictable from an analysis based purely on their pattern of evaluation.
+\end{abstract}
+
+\begin{keyword}
+Omnivorousness  \sep Taste \sep Schemas \sep Cultural Choices \sep Univores
+%% keywords here, in the form: keyword \sep keyword
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+%%\linenumbers
+
+%% main text
+\section{Introduction}
+\begin{itemize}
+	\item The study of patterns of cultural choice has generally ignored recent work in cultural sociology.
+    \item Goldberg's (2011) work was the first attempt to bring these two fields together.
+    \item However, even this work conflates schema and behavior by inducing schematic classes from tastes and inferring their choice behavior from the pattern that is obtained.
+    \item Schemas provide a behavioral {\em potential} that may be expressed in a (constrained) variety of ways.
+    \item Such a phenomenon may be observed for the omnivorousness (and univorousness)
+    \item This is exemplified in the (recent) ``varieties of omnivorousness'' literature and Bryson's work on varieties of univorousness. 
+\end{itemize}
+
+  
+
+ 
+
+ 
+
+\begin{figure}
+  \centering
+  \subfloat[][Avant Garde Clumpers]{\includegraphics[width=0.8\textwidth]{taste-corrnet-class1}} \\
+  \subfloat[][Folksy Clumpers]{\includegraphics[width=0.8\textwidth]{taste-corrnet-class2}}
+  \caption{}
+ \end{figure}
+
+\begin{figure}
+  \ContinuedFloat
+  \centering
+  \subfloat[][Contemporary Splitters]{\includegraphics[width=0.8\textwidth]{taste-corrnet-class3}} \\
+  \subfloat[][Multicultural Clumpers]{\includegraphics[width=0.8\textwidth]{taste-corrnet-class4}}
+  \caption{}
+ \end{figure}
+ 
+ \begin{figure}
+  \ContinuedFloat
+  \centering
+  \subfloat[][Conventional Splitters]{\includegraphics[width=0.8\textwidth]{taste-corrnet-class5}}
+  \caption{Correlation Network Among Genre Evaluations For Each Schematic Class.}
+         \label{fig:schematic}
+ \end{figure}
+ 
+These are shown in Figures~\ref{fig:schematic}a-\ref{fig:schematic}e. In each figure, the thickness of the edge is proportional to the size of the correlation between pairs of vertices (genres); positive correlations (the great majority of the cases) are presented as green edges, and negative correlations as red edges. To reduce clutter and aid in the visual identification of relevant patterns, only edges representing correlations of $|r| \geq 0.15$ are shown. In the figure, vertices (genres) are arrayed using the Fruchterman-Reingold spring embedding algorithm and vertex (genre) size is proportional to the clustering coefficient of that genre in the network (thus more ``embedded'' or ``central'' node for each schema is larger (Goldberg 2011). This layout method makes it easy to visually pick out cluster of genres that share strong positive correlations, thus revealing substantively relevant structure present in the schematic logic of each class. 
+
+
+
+To further aid in interpretation, each vertex (genre) is colored by their membership in four ``meta-genre'' categories obtained from an exploratory factor analysis of the \emph{behavioral} choices of individuals in the sample. This is shown in Figure~\ref{fig:typology}. Four such meta-genres emerge from the analysis, which I label, building on previous naming conventions in the literature (e.g. Van Eijck 2001), ``Rock/Pop,'' ``Art,'' ``Folk,'' and ``Afro-Pop.'' Colored Ellipses are drawn around the genres that belong to each meta-genre so as to give the reader an easy to read indication of the extent to which each logic tends to mix meta-genre categories or segregate them into distinct clumps. 
+
+Building on Zerubavel (1999), it is clear that three of the logics can be characterized (in relation to both specific genres and meta-genre categories) as ``clumpers'' (or mixers) and two of the logics can be characterized as ``splitters.'' Because a key point in what follows is that ``omnivore and univore'' should refer to the behavioral potential of each schematic logic (and not to the logic themselves) I refrain from labeling any of the logics as ``univore/omnivore'' as has been done previously (Goldberg 2011, Boutyline 2016). Instead, I label them by their dominant pattern of meta-genre preferences in combination with their tendency to either clump or split. Thus the five logics (in order of presentation in Figure~\ref{fig:schematic}, are (1) Avant-Garde Clumpers, (2) Folksy Clumper, (3) Generational Splitters, (4) Multicultural Clumpers, and (5) Conventional Splitters. 
+
+Aside from labeling conventions, the results in terms of the overall pattern of evaluative correlations in each logic, are surprisingly similar to the most recent schematic class analysis of taste data for the U.S. using CCA on GSS 1993 (in spite of including two genres, indie rock and pop music that were not included in the GSS 1993 instrument). As in those analyses, I uncover a schematic class  (``Generational Splitters''; see Figure~\ref{fig:schematic}c) who divide the musical world according to a strong evaluative partition separating genres that can be categorized as ``established/traditional'' (the Art and Folk meta-genres) from those that are better thought of as ``emerging/contemporary,'' (Rock meta-genres). This was a schematic logic that was also evident in Goldberg's (2011) analysis of these data using RCA and Boutyline's analysis of the same data using CCA. 
+
+Other classes resemble variants of schematic logics that appear in these previous studies. Avant Garde Clumpers GSS 1993 data. ``Folksy Clumpers,'' (see Figure \ref{fig:schematic}a) bear strong similarities, in their pattern of evaluations across genres, to the logic labeled as ``omnivore/univore'' in both Goldberg's and Boutyline's analyses of GSS 1993 data. ``Folksy Clumpers,'' (see Figure \ref{fig:schematic}b) have a strong resemblance to the class that Boutyline (2016; Figure 10C) labels ``Anything But Heavy Metal.'' `` Multiculturalist Clumpers'' GSS 1993 data. ``Folksy Clumpers,'' (see Figure \ref{fig:schematic}d) display a striking resemblance to the class that Boutyline (2016; Figure 10D) labeled ``Anything But Country.'' That both of these have ``clumper'' status is roughly consistent with Boutyline's conclusion that these represent ``variants'' of the ``omnivore'' schema, although as we will see it is more accurate to say that each class displays their own behavioral potential for a variety of omnivorousness.   
+
+Finally, the ``Conventional Splitter'' class uncovered in this analysis is similar to the schematic logic that Goldberg (2011) labeled ``Hi-Lo'' using RCA and which Boutyline could not find consistent evidence for using CCA using GSS 1993 data. In these data, this schematic logic emerges as one that makes fairly strong classificatory distinction that most clearly segregates specific genres according to their meta-genre category membership, and who in terms of their preferences, and generational/status markers as we will see below) most clearly resembles the standard highbrow/lowbrow pattern. In all, therefore my results are midway (and in many ways reconcile) the partially competing analyses of the schematic partition of the American population in the realm of musical taste obtained from previous work.  
+
+Accordingly, these results are consistent with the hypothesis that as early as the 1990s, the American musical taste field was already beginning to partition along multiple schematic logics that could be read as indicative of ``omnivorousness,'' (here re-labeled as ``clumpers'') (Boutyline 2016; Goldberg 2011). As we will see, this does not mean that most Americans are omnivores at the behavioral level, nor does it mean that taste discrimination based on notions of cultural hierarchy and aesthetic worth are not made; schematic logics seemingly based on omnivorousness and ``heterarchy'' may be behaviorally manifested in patterns of cultural choice that are both evidently discerning and clearly selective. Conversely, this does not mean that schematic logics based on splitting are not themselves productive of their own variety of omnivorousness at the behavioral level. 
+
+\subsection{Characterizing the Evaluative Structure of Each Schematic Logic}
+In what follows I briefly summarize what we can learn by looking at the structure of the correlations within each schematic class. I do this briefly because it is my contention that while much insight can be gained from this examination, confining our consideration to the structure of the schematic logic itself may hide as much as it can reveal. This is because the relation of schema to behavioral manifestation is one-to-many. In the same way, I would caution against applying labels that carry \emph{behavioral} expectations to any of these classes (such as omnivore/univore). Instead, we focus on the logic of correspondences and oppositions within each class noting the potential that this logic may have for both omnivorous and univorous forms of behavioral expression. 
+
+To aid in this task, Figure~\ref{fig:between} shows the betweenness centrality of each of the 20 genres in each schematic logic (Freeman 1979). This gives us a sense of both which genres are most important in ``holding together'' the network of associations in each schematic logic. At the level of each schema, logics can be characterized as resilient or ``heterarchical'' (Goldberg 2011) if they do not depend on any one genre to hold the correlation network together. Logics are fragmented (and thus carry potential for clumping) if they depend on a few genres to hold them together. For instance, it is clear from looking at the figure that the logic labeled in previous work as instantiating an omnivore/univore partition is has in fact the most well connected network, with most genres evincing some (non-zero) level of betweenness and with no genre particularly dominating over others as the most important for purposes of graph connectivity. 
+
+The logic labeled as ``Contempo/Trad'' in previous SCA work and referred to as ``Generational Splitters'' here is, in contrast, the most fragmented as it depends on (negative) connections between such genres as Hip and Opera to remain a connected structure. From this perspective, Folksy and Multicultural Clumpers appear as (weaker) variation of the Avant Garde clumper logic (but as we will see endowed with their pattern of meta-genre preferences) and the Conventional Splitters appears as a weaker version of the strong binary structure of their Generational counterparts. Note than in each schematic logic, genres with low (or zero) betweenness centrality are peripheral to the structure. As we will see below, this means that the evaluative logic of these genres tends to be decoupled from that characteristic of genres composing the more well connected core cluster. This decoupling, in its turn, can be traced to the fact that peripheral genres in each logic tend to be the ones most preferred by univores members of each class in terms of their behavioral choices.
+
+\subsubsection{Avant Garde Clumpers}
+This is the schematic logic one that most resembles what Goldberg and Boutyline label ``omnivore/univore.'' Most (but not all) of the cross-genre correlations are positive. This implies that, for these respondents, patterns of evaluation for one genre are linked to similar patterns (and direction) of evaluation in others with few ``categorical'' partitions. Note however, that in spite of this general characterization, Figure~\ref{fig:schematic}a shows that Avant garde clumpers do tend to make evaluative link in a way that (partially) recovers meta-genre categories. Thus, Folk genres are relatively peripheral to the overall schema, with Bluegrass, Folk and Gospel strongly linked and Country decoupled from the rest; in the same way, all Rock/Pop genres are also strongly associated, and via Alternative and Metal tend to be incorporated into the core of the schema, which is primarily composed of a strong evaluative cluster containing all of the ``Art'' genres. In fact, the only meta-genre cluster that is ``scrambled'' by Avant Garde Clumpers is the Afro-Pop one and this is driven by the fact that Hip Hop is both peripheral to the schema (and thus evaluatively decoupled from the rest) and evaluatively opposed to the Rock/Pop cluster. 
+
+In this respect, the peripheral positions of both Country, Hip Hop as well as the negative correlations of the latter with other genres that are also peripheral to the logic (e.g. Pop, Classic Rock) suggest that members of this class are not necessarily shy about imposing strong structure to their evaluations. In addition it is clear that the evaluation of genres such as Pop is at least partially decoupled from those which members of this class do cluster together in the strongest  component (e.g Alternative, Classical, Jazz, Blues, Reggae, Opera, Folk, Latin, bluegrass, Metal). This means that this logic has the potential of yielding an omnivore type that would combine an eclectic set of styles (belong to the Art, Afro-Pop, and Rock-Pop meta-genres mainly) into a unique profile of behavioral choices.  
+
+\subsubsection{Folksy Clumpers}
+The correlation network the Folksy Clumper logic has a broad structural resemblance to the Avant Garde Clumpers: it is composed mainly of a large connected component of genres tied via positive evaluative links. This gives the strong impression (and temptation) to label it as a variant of an Omnivore/Univore logic which, given the negative correlations between Metal and a some of the genres, can be characterized as an ``anything but heavy metal'' variant (Boutyline 2016), although in these data it comes closer to an ``anything but heavy metal or hip hop'' pattern. However, note that in contrast to the Avant Garde clumper schema (which has been labeled in previous work as a purer form of omnivorousness), the Folksy clumper schema makes hash of meta-genre categories and thus seems like an evaluative schema that is not only ``clumping'' but mixing evaluative logics in an unconventional way. This can reflect a true Maverick attitude, but as we will see it is actually more reflective of a lack of a familiarity with categorical and evaluative conventions generated by the fact that persons who follow this logic are older and tend to lack objectified forms of cultural capital. It is clear that, given the genres strongly connected in the core region of the correlation network (e.g. Reggae, Bluegrass, Blues, Folk, Rock, Pop, Jazz, Easy, Classic Rock; these are also the genres with the highest centralities in Figure~\ref{fig:between}), this schematic logic has the behavioral potential to yield a form of omnivorousness, although its specific manifestation will be distinct from that of the Avant Garde omnivore class. 
+
+\begin{figure}[t!]
+\centering\includegraphics[width=1.0\linewidth]{genre-betweenness-by-schematic-class}
+\caption{}
+\label{fig:between}
+\end{figure}
+
+\subsubsection{Generational Splitters}
+As already intimated, the correlation network corresponding to the Generational Splitter class (Figure~\ref{fig:schematic}c) is distinctive if only for its remarkable similarity to the map labeled ``Comtempo/Trad'' by Goldberg (2011) and the very similar structure uncovered  in Boutyline (2016) using the same CCA strategy as here. This is consistent with the notion that this represents a robust logic that continues to characterize a substantial segment of the American population. From the figures, it is clear that this is the only schematic logic that displays a clear binary ``clique structure'' in the correlation network. As shown in Figure~\ref{fig:between}, the fragmented nature of the logic is given by the extremely high dependence on just a few genres (e.g. Contemporary Rock, Hip Hop, Opera) for graph connectivity. As such, this is the logic that most clearly evinces a dichotomous logic of classification separating genres known to be preferred by older, whiter, and more affluent audiences from forms of youth, commercial, and industry-based musics with cross-ethnic and cross-class appeal. This schematic logic seems to point to (in terms of behavioral implications) to a form of segmented or hierarchical taste and thus is not labeled as ``omnivorous'' by either Goldberg (2011) or Boutyline (2016). As we will see below ,this schematic logic can support a form of behavioral omnivorousness although it is one that exploits what have been referred to before as newer and emerging forms of cultural capital on the contemporary side of the divide (Friedman, Savage and Hanquinet 2015).
+
+\subsubsection{Multicultural Clumpers}
+The core of the ``Emerging Multiculturalist'' logic is composed of strong positive correlations between a large cluster of genres; negative correlations are rare and relatively weak. Once again the indication is that this logic supports a omnivore/univore partition, except that it excludes country (Boutyline 2016). Looking at the connectivity structure, it is clear that this logic has more peripheral genres than its comparable Avant Garde and Folksy clumper counterparts (as shown in Figure~\ref{fig:between}): Metal, Latin, Jazz, Hip Hop, Gospel, Folk, Easy, Electronic Dance, Country, and Classical contribute little to the connectivity structure of graph. This tells us that this Multicultural Clumpers may have the potential to support the most variegated forms of omnivorousness, although in contrast to that characteristic of the Avant Garde and Folksy clumpers no clear oppositional relation is evident between the decoupled and core genres. Like the these logics, there is a set of eclectic genres having linked evaluative fates (and thus the most betweenness centrality in the graph): Hip Hop, Dance, Blues, Jazz, Reggae, Classic, Alternative, and Contemporary Rock. Gospel/Religious and the triad of Country, Bluegrass and Folk stand at the periphery, suggestive of a decoupling in the evaluative logic applied to genres belonging to the Folk category. The Rock/Pop genre of Metal is also peripheral to the core component.
+
+\subsubsection{Conventional Splitters}
+Finally, the schematic logic summarized in the correlation network shown as Figure~\ref{fig:schematic}e, is distinctive in at least two ways. First, it contains a number of oppositional (negative correlations separating a variety of the genres from one another (e.g. Classic Rock and Oldies and Easy Listening Music from most genres). Other than the Generational Splitters, this also is the logic with the most negative cross-genre correlations; this is suggestive of a weaker version of the stronger oppositional structure by members of this class. This is reinforced by the fact that, as shown in the right-most panel of Figure~\ref{fig:between}, this logic displays very high dependence on a couple of genres (e.g. Blues, Big Band, and Hip Hop) to sustain the integrity of the structure.  In addition, the core positive correlation network is evidently more segmented than that of other logics (excepting 3), indicating a weaker potential to behaviorally manifest itself as a form of omnivorousness of a breadth comparable to that of other classes. 
+
+Persons sharing the Conventional Splitter logic tend to make strong evaluative connections between Metal and Hip Hop (like Folksy Clumpers) but they also have a propensity to schematically link these genres to Rock, Latin, Reggae, Alternative and Dance. This indicates that conventional splitters seem to be following meta-genre classifications in their taste judgments. This genre-cluster is separated other sub-clusters containing Country, Folk, Bluegrass and Gospel (on the lower left) and another clique containing  mostly ``Art'' genres (Easy Listening, Musicals, Big Band,  and Classic Rock. Jazz, Opera, and Blues serve as ``bridge genres" (see Figure~\ref{fig:between}) connecting otherwise disconnected islands within this logic. This suggests that persons that use this logic tend to make broad distinctions within the musical field grouping genres that seem to share broad cultural (if not musicological) affinities, and then setting up positive evaluative linkages within these clusters and negative linkages across clusters. In this respect, this logic stand between the bipartite Generational Warrior logic shown in Figure~\ref{fig:schematic}c and the more ``heterarchical'' logics that have been labeled as ``omnivorous'' (most distinctively Figure~\ref{fig:schematic}a) in previous work. 
+ 
+\subsection{Analysis of Behavioral Cultural Choices by Schematic Class}
+Previous work applying schematic class analysis to uncover the schematic logic governing cultural choices in the U.S. usually rests content on doing what I did above: namely, ``reading'' the presumed behavioral implications of each logic from the pattern of correspondences and oppositions evident in the correlation network elicited from each respondent subset. Because GSS 1993 lacks data on respondents actual consumption behavior, analysts are thus forced to supplement their analysis by looking at the socio-demographic correlates of each schematic logic (e.g. Goldberg 2011) and then using substantive and theoretical knowledge to produce educated guesses as to their possible behavioral implications. 
+
+However, as discussed above, the behavioral implications of any given schema are variegated and to some extent open-ended empirically (although not unrestricted). As such, it is unlikely that speculative or indirect strategies, however informed by theory or substantive knowledge, will get them just right. For instance, take the binary ``Generational Warrior'' logic shown in Figure~\ref{fig:schematic}c. How will it manifest itself at the level of actual cultural choices? As an embrace of tradition and a rejection of contemporaneous genres? As an embrace of contemporaneity and are rejection of tradition? A mixture of both? Correlating the logic to demographics (e.g. Goldberg 2011) can give us some purchase on these questions (e.g. if age is negatively correlated with this schematic logic we would bet on the second option), but they can only be answered by linking the schematic logic with behavior that we presume is guided by the schema.
+
+As noted earlier, some confusion has emerged in recent work because analysts applying SCA to taste data have labeled certain schematic logics as ``omnivorous'' (or more accurately evincing an implicit omnivore/univore behavioral potential) based on the fact that the correlation network extracted from either RCA (Goldberg 2011) or CCA (Boutyline 2016) produces a clumped arrangement with mostly positive connections between genres and no obvious graph-theoretic cutpoints (as in Figure~\ref{fig:schematic}a). In contrast, as argued earlier, all logics, regardless of whether they exhibit high levels of segmentation or not, should be considered as having the behavioral 
+potential for distinct forms of omnivorousness (and univorousness) at the behavioral level, the particular form of which depends on the evaluative association structure of the given logic.
+
+To investigate this issue empirically we require data on both the classificatory/evaluative logics of individuals as well as their actual consumption and ranking behavior. The SSI 2012 provide us with such information. This allows us to address two key questions: First, do the different schematic logics afford similar potential for univorousness and omnivorousness at the behavioral level? Second, if so, what is the particular forms in which behavioral univorousness and omnivorousness takes for person who have internalized different evaluative logics? 
+
+To answer these questions, we need to come up with a criterion for ranking respondents according to the behavioral manifestation of univorousness and omnivorousness. We select the most straightforward such criterion: The number of genres that the respondent reports listening to, which we will we refer to as \emph{behavioral omnivorousness (univorousnesss)} in what follows. We can then ascertain whether different schematic logics afford comparable potential for behavioral omnivorousness by looking at the distribution of the number of genres actually listened to by schematic class membership (to answer the first question). We can then proceed to look at their disaggregated patterns of cultural choice by looking at their genre-specific consumption behavior within levels of behavioral omnivorousness across schematic classes (to answer the second question).
+
+\begin{figure}[t!]
+\centering\includegraphics[width=1.0\linewidth]{omnivore-by-schematic-class}
+\caption{}
+\label{fig:omnivore}
+\end{figure}
+
+\subsection{Behavioral Distribution of Omnivorousness Across Schematic Classes}
+Figure~\ref{fig:omnivore} super-imposes the five univariate distributions of an ordinal behavioral omnivorousness variable classifying respondents by the number of genres that they report listening corresponding to each schematic class. The figure provides support for the contention that all classes have comparable potential for the behavioral expression of omnivorousness \emph{and} univorousness. Across all schematic classes the distribution of number of genres listened follows a typical (truncated) Poisson shape, peaking at about three to four genres chosen (second quartile of the distribution) and tailing off sharply thereafter. More importantly, all behavioral categories are well represented in all schematic classes. For instance, while persons who choose about one or two genres (behavioral univores; bottom quartile of the distribution) are slightly over-represented in the schematic classes Established Omnivore and Traditional Highbrow classes, they make up between about 19\% to 26\% of respondents across all five schematic classes. In the same way, while moderate omnivores (e.g. persons choosing between seven and eight genres; between the 75th and 90th percentile of the distribution) are overrepresented in the Emerging Multiculturalist class in relation to the Traditional Highbrow class, they still represent one tenth of all respondents in this last group. Finally, while extreme behavioral omnivores (nine or more genres chosen corresponding to the top decile of the overall distribution) naturally rarer, they are still present at comparable levels across all schematic classes, ranging from 9 (Folksy Clumpers) to 13\% (Multicultural Clumpers) of respondents in each class. 
+
+\subsection{Varieties of Cultural Choice by Schematic Class}
+\begin{figure}[t!]
+\centering\includegraphics[width=1.0\linewidth]{listening-by-schematic-class}
+\caption{}
+\label{fig:listen}
+\end{figure}
+
+\begin{figure}[t!]
+\centering\includegraphics[width=1.0\linewidth]{favorite-by-schematic-class}
+\caption{}
+\label{fig:favorites}
+\end{figure}
+
+Figure~\ref{fig:listen} plots the proportion of respondents who report listening to each one of the twenty genres (on the y-axis) by levels of behavioral omnivorousness (on the x-axis) for each schematic class. Genres are arranged from top left to bottom right in order of overall levels of popularity, from the one least likely to be listened to (Opera) to the one that is most frequently chosen (Classic Rock/Oldies). We supplement this analysis with a breakdown of the respondent's response to a forced choice item asking them to choose their favorite from the same genre list; this is shown in Figure~\ref{fig:favorites}. We will see that this summary of the behavioral propensities in each schematic class provides a revealing picture of the multiple ways in which each schema manifests itself behaviorally. Most of the results are ones that would have been impossible to predict  solely on the basis of an armchair reading of the correlation pattern that is characteristic of each schematic class.
+
+To begin, we can readily appreciate that there is significant structured heterogeneity  across schematic classes in the way that both behavioral univorousness and omnivorousness are expressed via  engagement with each genre. Looking at the baseline probability of engagement towards the low end of behavioral omnivorousness (e.g. one to two genres chosen), see can see that some genres lend themselves more readily to the behavioral choices of univores in each class. Looking at the high end of the scale we can see that others genres are more likely to enter the behavioral repertoire of omnivores. However, as shown by the vertical differences among the different lines at the same level of behavioral omnivorousness, it is clear that both of these effects depend on schematic class membership. 
+
+For instance, genres like Opera, Big Band, Folk, or Latin Music are a relative rarity in the behavioral repertoire of most schematic classes, even towards the upper end of behavioral omnivorousness. These may be because these are either forms of emerging (e.g. in the case of Latin and Folk music) or increasingly obsolete and/or specialized (e.g. in the case of Big Band and Opera) forms of cultural capital. Other genres, like Classic Rock, Blues, Country, Jazz and to a lesser extent Pop and Classical seem to make it in the  repertoire of members of (almost) all schematic classes and are close to universal in the behavioral repertoire of the majority of omnivores; these seem to form the basis of ``all purpose'' forms of cultural capital in the musical field (DiMaggio 1987). A third group of genres, such as Bluegrass, Folk, Hip Hop and Rap, Hymns and Religious Music, Reggae, Broadway/Show Tunes, Alternative Rock, Electronic Dance, Heavy Metal and to a lesser extent Musicals mark divisions in the American omnivore field; they make it to the omnivore repertoire of some schematic classes but not others. They are thus likely to stand out as strong symbolic markers of different varieties of behavioral expression.
+
+Looking at the baseline probability of engagement across genres for respondents who report only listening to one or two genres give us a sense of how ``univorousness'' is expressed in each schematic class. The key result is that genres vary in both the baseline probability of being engaged by behavioral omnivores and the cross-class variation on this behavioral outcome. In particular genres with a high probability of being listened by omnivores such as Classic Rock, Country, Pop, Classical, Hip Hop, and Religious music, display strong variation, being relatively more likely to be part of the behavioral expression repertoire of members of some schematic classes than others. This suggests that most form of univore expression are ``segmented," and that these genres are likely to form the tapestry of divisions that Peterson (1992) thought was constitutive of the segmented univore field. For instance, listening to Hip Hop is relatively common in the behavioral repertoire of univore Generational Splitters but a relative rarity among univores who follow different schematic logics. In the same way, Folksy Clumpers and Conventional Splitters are very likely to be Country Music fans even when making a relatively small number of choices, which makes them very different from their behavioral counterparts among Multicultural Clumpers. 
+
+\subsubsection{Avant Garde Clumpers} 
+As shown in Figure~\ref{fig:listen}, when this evaluative logic is behaviorally manifested as ``univorousness'' (e.g. four genre choices or less), it does so in the almost exclusive choice of Metal, Classic, Alternative, or Contemporary Rock, or Pop. As Figure~\ref{fig:favorites} shows, these are also the genres that are most likely to be selected as ``favorites'' all of these genres also belong to a single coherent meta-genre category (see Figure~\ref{fig:typology}: Rock/Pop.  Note that these are precisely the genres that Avant Garde Clumpers tend to perceive as both having a strong evaluative affinity and as having an oppositional relationship to other genres in general and Hip Hop in particular (see Figure~\ref{fig:schematic}a). This last is a genre that has a relatively low probability of being listened to by univore (and even omnivore) members of this schematic class. As such, while seemingly a ``clumpy,'' this logic still generates a fairly coherent set of choices at the behavioral level when manifesting itself as univorousness.  
+
+Looking at how the probability of choosing any one genre increases (or stays relatively flat) as we move up in the number of genres chosen (see Figure~\ref{fig:listen}) gives us a sense of how each schematic logic allows for (or prevents) the incorporation of that genre into its distinctive form of omnivorousness. Following this analytic heuristic, it is clear that the most ``distinctive'' (in terms of having a stronger than average likelihood of being included into the repertoire) genres for Avant Garde Clumpers are Alternative Rock, Contemporary Rock, Electronic Dance Music, Reggae, and Heavy Metal. Note that these genres include some that are difficult for members of other schematic classes to incorporate into their own behavioral omnivorousness repertoire (e.g. Reggae, or Metal and Hard Rock), and as such would seem to behaviorally mark the variety of omnivorousness displayed by members of this schematic class as distinct. 
+
+This impression is corroborated by the fact that, as shown in Figure~\ref{fig:favorites}, Avant Garde Clumpers stand out for having a relatively high likelihood of selecting Alternative Rock and even Heavy Metal (along with Generational Splitters) as their favorite in spite of the relatively low overall likelihood of these genres being selected as favorites overall. As you may recall from the schematic logic map, these genres, along with typical ``omnivorous'' genres such as Classical, Blues, and Jazz, figure prominently in the core large interconnected clique of this schematic logic, with Contemporary Rock serving as a bridge connecting the denser part of the correlation network to what we can now can interpret as the ``univore'' region of the schema linking Classic Rock and Pop. 
+
+Genres displaying the opposite tendency, namely, a relative reticence to be incorporated into the omnivore behavioral profile of a given schematic class, provide information about the behavioral limits imposed by the Established Omnivore evaluative schema. These are Broadway Musicals, Religious Music, Big Band, and Latin Music (and to a lesser extent Hip Hop). Overall, this schema can be characterized as having the behavioral potential to produce a set of choices evincing a relatively lax orientation towards cultural hierarchy, capable of incorporating a wide swath---when manifested as behavioral omnivorousness---of cultural forms inclusive of ``popular culture'' genres, traditionally established artistic genres, and initially commercial, industry, or scene-based genres (Lena 2012), that have or are on their way to aesthetic mobility. This anti-hierarchical orientation is, however, \emph{selective} drawing the line at genres considered either too indicative of middlebrow or traditional culture (e.g. Musicals, Big Band) or containing content (such as religious themes) incompatible with certain forms of secular cosmopolitanism (Lizardo and Skiles 2015). 
+
+This is consistent with the characterization of the Established Omnivore class as expressing an ``omnivore/univore'' logic in previous work (Goldberg 2011;  Boutyline 2016), with the caveat that this is probably more accurately rendered as a \emph{potential} to support particular forms of behavioral univorousness and omnivorousness, since, as we have seen, distinct types of ``omnivores,'' (and univores) are present in all classes (see Figure~\ref{fig:omnivore}). 
+
+In the Established Omnivore case, reading the behavioral propensities from the schematic pattern of concordances and oppositions revealed by CCA is not necessarily misleading, even though particular nuances, such as the fact that members of this schematic class tend to display a secularist aversion to religious music or tend to express univorousness either by becoming Country Fans or Classic Rock fans but not Hip Hop fans, would have been lost. We will see that things are not as straightforward in the case of other schematic classes (especially the Generational Warrior class). In all however, we may conclude that Avant Garde Clumpers are definitely emblematic of the ethos of ``openness to diversity'' that some scholars tend to see as the prototypical (or at least dominant) form of omnivorousness in late modern societies (Ollivier 2008).
+
+\subsubsection{Folksy Clumpers}
+The most behaviorally univorous members of this class are similar to Avant Garde Clumpers in being attracted primarily to Classic Rock, Country, or Pop. However, the similarities between these two schematic classes end there; as Figure~\ref{fig:listen} shows, the Folksy Clumper logic, when manifested behaviorally as omnivorousness, evinces a behavioral aversion to precisely those genres that form the core taste repertoire of Avant Garde Clumper omnivores. As such, the variety of ``omnivorousness'' that could be supported by this schema is perforce of a decidedly different cast. 
+
+This is most distinctively shown in their relative reticence of Folksy Clumpers to express behavioral omnivorousness via the choice of Alternative, Metal/Hard Rock, Reggae, Bluegrass, and to lesser extent Hip Hop (although they converge with Avant Garde Clumpers in their aversion to Religious Music). Instead, the most distinctive behavioral propensity of Folksy Clumpers (shared with Conventional Splitters) is an attraction to Broadway Show Tunes, which is precisely one of the genres most studiously avoided by Avant Garde Clumper omnivores. 
+
+The profile of favorites of Folksy Clumpers, shown in Figure~\ref{fig:favorites}, reinforces this impression, as it most distinctively includes Classic Rock (which does join them with certain fractions of the Established Omnivore class), Country (joining with Conventional Splitters), and Mood and Easy Listening. They break with Avant Garde Clumpers in their very low likelihood of selecting Alternative Rock as a favorite. 
+
+This set of behavioral expressions seems indicative of a decidedly ``middlebrow'' form of omnivorousness. This makes the behavioral investments of Folksy Clumpers the most ``common'' or relatively safe among all classes; they thus display a form of ``cultural goodwill'' in Bourdieu's (1984) sense. For instance, Folksy Clumpers that choose a large number of genres have an almost certain probability of consuming Pop and Top 40 fare, but tend to stay away from anything whose combination implies anything risky, emerging, avant garde, or boundary-blurring (e.g. Jazz and Metal; Hip Hop and Classical). 
+
+Given that Folksy Clumpers are likely to positively link a relatively large number of genres (e.g. see Figure~\ref{fig:schematic}b), a reading based purely on the CCA results could have easily reached the mistaken conclusion that this is just a variant of the ``omnivore/univore'' pattern similar to that of displayed by Avant Garde Clumpers aside from a few ``anything but'' (in this case Heavy Metal) exceptions (e.g. Boutyline 2016 makes an interpretation of this sort). Looking at the behavioral expression of the schematic logic helps to disambiguate this claim, and shows that while Folksy Clumpers are quite capable of displaying a form of omnivorousness, it is of a decidedly different (indeed ``weaker'' and more restrained) sort as that displayed by Avant Garde Clumpers.
+
+In this sense, it is clear that, given their pattern of behavioral choices, the strong propensity to coordinate their judgments of Metal, Hip Hop, Classic Rock and Easy listening (respectively) while mutually opposing each pair was diagnostic of an important classificatory signature. This is a relative aversion, shared by both univore and omnivore members of this schematic class, to the sort of industry-instigated and/or scene-based aesthetic experimentation characteristic of more ``contemporary'' genres and an attraction towards safer cultural forms. 
+
+This characterization also helps to makes sense of the fact that Folksy Clumpers tend to make the strongest binary schematic correspondences (see Figure~\ref{fig:schematic}b) between genres linked culturally and semantically (e.g. Blues and Bluegrass; Folk and Bluegrass; Jazz and Blues), indicating a reliance on surface (``binary clumping'') heuristics for evaluative purposes rather than deep familiarity with genre characteristics.
+
+\subsubsection{Generational Splitters}
+As you may recall from Figure~\ref{fig:schematic}c, we were able to conclude, solely from inspection of the CCA results, that members of schematic class 3 were the most likely to exhibit categorical familiarity with a well-worn set of oppositions separating legitimated forms of ``established'' music from more contemporary, commercial and popular forms. This was the schematic logic that displayed the strongest segregation across clusters of genres so defined. Proper characterization of schematic classes displaying essentially this set of oppositions has been ambiguous in previous SCA inspired studies of taste using GSS 1993. For instance, both Goldberg (2011) and Boutyline (2016) consider this schematic class as evincing a classificatory (and evaluative) propensity to oppose ``traditional'' (e.g. Classical Music or Broadway Musicals) to ``contemporary'' (Rock, Rap or Metal) genres. However, a weakness of this analysis is that it could not really tell us which particularly direction of the binary would be most dominant behaviorally, and that it conflated the classificatory structure of the schema (it is a ``splitting" and not a ``clumping" logic) with its omnivorousness potential. 
+
+Inspection of Figures~\ref{fig:listen} and \ref{fig:favorites} help to fill in some of the more open ended empirical considerations and provide support for the idea that this schematic class allows for its own sort of omnivorousness. First, note that, behaviorally, this class is heavily weighted towards the ``contemporary'' side of the equation. Thus, when exhibiting behavioral univorousness, this is likely to manifest itself as exclusive taste for Hip Hop and Rap, Blues and R\&B, Top 40 offerings, and Reggae. However, there is one exception to this pattern: the schematic logic of this group of respondents has a tendency to appear in the form of Classical music univorousness, indicating that if there is a behavioral potential for ``highbrow univorousness'' in the traditional sense afforded for (likely older) Generational Splitters. In contrast to univore members of the two schematic classes previously considered, Generational Splitters are relatively unlikely to express univorousness via the consumption of the most popular genres such as Country or Classic Rock. 
+
+This set of impressions are reinforced by looking at their choice of favorites. As shown in in Figure \ref{fig:favorites}, Generational Splitters are distinctive for their propensity to select Hip Hop and Alternative Rock as their favorite genres, but they are also the most likely (with Conventional Splitters) to choose Classical. Note also from Figure~\ref{fig:favorites} that Generational Splitters are distinctive (with Multicultural Clumpers) in being less likely to select very popular genres (such as Classic Rock or Country) as their favorite, indicating a discerning propensity to stay away from the cultural forms that are found appealing by most people. 
+
+This suggests that, consistent with the binary partition that organizes their evaluations, Generational Splitters are likely to express forms of univorousness that are evaluatively, demographically, and institutionally opposed to one another. This impression is reinforced by looking at the favorite genres of members of this class. For instance, members of this class are some of the most likely to select Classical Music {\em and} Hip Hop (or Alternative) as their favorite genres, reinforcing the impression that this logic brings together categorically strange bedfellows. Recall for instance, that Classical Music and Rap were located on different sides of the binary genre clique in the correlation network joined by a negative tie (indicating opposite evaluation tendencies). In this case, we can thus appreciate how the same schematic logic can produce very different behavioral manifestations at a practical level as a result of the potential oppositions built into it. 
+
+When Generational Splitters do cross-over into omnivore territory they are likely to do so by incorporating Alternative, Dance, Jazz, or Folk. Accordingly, this schematic logic, when behaviorally instantiated as omnivorousness, results in a particular variant of this taste pattern taking the form of a ``contemporary'' omnivorousness. This form of openness to aesthetic diversity ranges widely across a variety of genres associated with youth, rock, punk, alternative, and hip hop cultures. Note however, that this is not necessarily a taste for the ``popular,'' (as members of this class are relatively likely to refuse the more common offerings) but an orientation towards commercial and other scene genres with the capacity to receive some level aesthetic elaboration. These are genres of increasing global appeal that tend to combine transnational influence and which have implicated in a type of late modern ``aesthetic cosmopolitanism'' at this level (Regev 2007). Generational Splitters who choose a lot of genres thus seem to be investing in forms of ``emerging forms cultural capital'' while shunning traditional and established forms. This impression is reinforced by the fact that even when choosing a lot of genres, Generational Splitters are likely to stay away from ``traditional'' genres . For instance, such genres as Opera, Easy Listening, Bluegrass, and even a ``common'' omnivorous genre such as Jazz are relatively likely to be shunned.  
+
+In all these results shed light on the current manifestation of this taste pattern. It does redeem an interpretation of this logic as implying a full recognition of a ``contemporary'' versus ``traditional'' divide (Goldberg 2011). However, this recognition is more likely to be mobilized today by the (behaviorally omnivorous) members of this class that choose the decidedly ``contemporary'' path and \emph{reject} tradition rather than by (non-existent) rear-guarders intent on upholding traditional aesthetic patterns. The only traditionalists within this subset are those (behaviorally univorous) people who hold fast as Classical music univores, who in recognizing the same set of oppositions as their more contemporary counterparts stake their claim on a behavioral investment in the most recognizable and well-established aesthetic form in Euro-American music, one that no longer serves to garner much in the way of cultural distinction. 
+
+\subsubsection{Schematic Class 4}
+As shown in Figure~\ref{fig:listen}, members of schematic class 4 are characterized by their relative aversion (unless they are omnivores) to Opera, and Alternative Rock and by their reticence to engage, in all cases, such genres as Metal and Folk. Schematic class univores can be found mostly among the ranks of Pop fans, but they quickly take up such genres as Hip Hop, Rap and Blues even at moderate levels of omnivorousness (e.g. three to four genres consumed as given by the triangle shaped markers). These are both genres traditionally associated with Black culture and, in spite of fears of ``whitening,'' still disproportionately consumed by Blacks. 
+
+When manifesting itself as a form of behavioral omnivorousness this schematic logic tends to gravitate towards the most ``common'' genres (e.g. the ones that are both the most frequently selected and overlap with the omnivore profile of most of the other schematic logics), such as Classic and Contemporary Rock, Classical Music, Dance/Techno Music, Jazz, and Country Music. This class is also distinctive in being the one (along with members of the previous schematic class) most likely to choose Latin music (among omnivores). However, this schematic logic does not allow for behavioral omnivorousness in relation to a few key genres, including Bluegrass, Metal, Folk, Alternative Rock, and Broadway Musicals. In fact, members of this schematic class are the least likely to engage Bluegrass and Folk music at all levels of omnivorousness. This is consistent with the strong positive association between these two genres revealed in the correlation map in Figure~\ref{fig:schematic4}, which also showed a tendency to decouple evaluation of these two forms (along with Country) from the other genres constitutive of the largest clique (and thus more likely to be used to express omnivorousness according to this logic).  These restrictions imply that whatever omnivorous behavioral pattern is allowed by this logic would be of a much more restricted sort as those implied by Schematic logic 1. 
+
+\subsubsection{Schematic Class 5}
+Members of schematic class 5 are characterized by their relatively small likelihood of incorporating Alternative Rock, Electronic Dance, Hip Hop, and Heavy Metal into their behavioral omnivorousness repertoire. In fact, even at the maximum level of omnivorousness these respondents have some of the lowest probabilities of engaging some of the most popular ``contemporary'' genres such as Rock and Pop. By way of contrast, they have no problem incorporating Jazz, Musicals (in particular), Easy Listening, Country, Bluegrass, Folk, Religious Music, Latin Music, and Classic Rock. In terms of the schematic logic governing the choices in class 3, these are genres characterized by attachment to tradition, and signaling version of middle class staidness. They are also characteristic of relatively older (and Whiter) audiences. 
+
+Tellingly, these are the individuals who are also most likely to report favoring traditional genres, such as Big Band and Country and they are the most likely to say that Religious Music is their favorite (see Figure~\ref{fig:favorites}. Note that univores in this class are also attracted to the same suite of traditional most importantly Country, Classical, Easy Listening, Religious, or Classic Rock. As such, this schematic logic, when behaviorally instantiated as omnivorousness, results in a form of quasi-traditionalist highbrow taste, which corresponds to its original univorous manifestation. It is a form of, staid ``highbrow omnivorousness'' combining traditionally high status and traditionally Folk-American and religious musics with a tinge of Latin and Rock rhythms. 
+
+This result is consistent with, but not completely predictable, at least absent behavioral information, from the schematic logic obtained from the CCA and depicted in Figure~\ref{fig:schematic5}. As the reader may recall, this logic seemed to display the signatures of a somewhat partitioned evaluative structure, lumping all ``youth'' and commercial musics together. This manifests itself behaviorally in the relative abstention of members of this class from these forms, in favor of more the more restrained group of genres found towards the top and left of Figure~\ref{fig:schematic5}. While omnivore members of this class explore this space (combining Easy, Musicals, Classical, Classic Rock), univores tend to confine themselves to the genres most decoupled in the correlational network such as Country, Gospel or Classic Rock/Oldies. 
+
+\section{Discussion}
+\begin{itemize}
+\item The other way that the characterization of this class remains ambiguous is of more theoretical interest. Our argument is that just by knowing that somebody can recognize strong genre boundaries separating different forms of culture it is not possible to determine whether this will show up behaviorally as a choice of one kind (e.g. traditional genres) with corresponding shunning of the other (e.g. commercial ones) or the opposite pattern (or some bi-modal distribution of both behavioral patterns). The schematic logic only provides a potential for what remains an empirically open ended (and thus to be determined) set of potential behavioral realizations. The other theoretically relevant issue, is that in previous work using schematic class analysis this class has not been read as ``omnivorous'' but as simply evincing a split pattern of judgment recognizing some sort of categorical genre distinction (whether linked to status, tradition, or contemporaneity). But as noted above, omnivorousness can appear in many guises and no schematic logic dictates a complete lack for omnivorous potential. Instead, each schematic logic shapes the way that any particular form of omnivorousness (or omnivorousness) is manifested (both synchronically and diachronically). 
+\item Begin with Peterson's pyramid quote and segueway into contemporary understandings of varieties of omnivorousness and the ``rectangle'' imagery.
+\item Omnivores in schematic class 3 are the most likely to experience themselves as crossing strong boundaries when engaging in behavioral omnivorousness and for that reason may have most at stake in defending and circumscribing those boundaries (Goldberg et al 2016). 
+\end{itemize}
+%Hypothesis, these are high status southerners or older high status whites. 
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}          ==>>  [#]
+%%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
+%%   \citet{key}         ==>>  Author [#]
+
+%% References with bibTeX database:
+
+\bibliographystyle{model1-num-names}
+\bibliography{sample.bib}
+
+%% Authors are advised to submit their bibtex database files. They are
+%% requested to list a bibtex style file in the manuscript if they do
+%% not want to use model1-num-names.bst.
+
+%% References without bibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-1-num.tex'.

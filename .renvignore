@@ -1,0 +1,7 @@
+# .renvignore
+# Ignore specific folders to speed up renv and avoid unnecessary dependencies
+old/
+Drafts/
+Slides/
+pdf/
+png/
