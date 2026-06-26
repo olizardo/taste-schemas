@@ -1,0 +1,417 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=latex 2026.6.23)  25 JUN 2026 17:48
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+(./elsarticle.cls
+Document Class: elsarticle 2008/05/22, 1.0.1: Elsevier Science
+\@bls=\dimen150
+(/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen151
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 106.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2025/01/21 v3.2a Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count284
+\c@fnote=\count285
+\c@cnote=\count286
+\c@ead=\count287
+\c@author=\count288
+\@eadauthor=\toks18
+\c@affn=\count289
+\absbox=\box53
+\keybox=\box54
+\Columnwidth=\dimen154
+\space@left=\dimen155
+\els@boxa=\box55
+\els@boxb=\box56
+\leftMargin=\dimen156
+\@enLab=\toks19
+\@sep=\skip51
+\@@sep=\skip52
+ (./main.spl) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count290
+)
+\splwrite=\write3
+\openout3 = `main.spl'.
+
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count291
+\Gm@cntv=\count292
+\c@Gm@tempcnt=\count293
+\Gm@bindingoffset=\dimen157
+\Gm@wd@mp=\dimen158
+\Gm@odd@mp=\dimen159
+\Gm@even@mp=\dimen160
+\Gm@layoutwidth=\dimen161
+\Gm@layoutheight=\dimen162
+\Gm@layouthoffset=\dimen163
+\Gm@layoutvoffset=\dimen164
+\Gm@dimlist=\toks20
+)) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen165
+\captionmargin=\dimen166
+\caption@leftmargin=\dimen167
+\caption@rightmargin=\dimen168
+\caption@width=\dimen169
+\caption@indent=\dimen170
+\caption@parindent=\dimen171
+\caption@hangindent=\dimen172
+Package caption Info: elsarticle document class detected.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/caption/caption-elsarticle.sto
+File: caption-elsarticle.sto 2020/08/22 v2.0 Adaption of the caption package to the elsarticle document class (AR)
+))
+\c@caption@flags=\count294
+\c@continuedfloat=\count295
+)
+\c@KVtest=\count296
+\sf@farskip=\skip55
+\sf@captopadj=\dimen173
+\sf@capskip=\skip56
+\sf@nearskip=\skip57
+\c@subfigure=\count297
+\c@subfigure@save=\count298
+\c@lofdepth=\count299
+\c@subtable=\count300
+\c@subtable@save=\count301
+\c@lotdepth=\count302
+\sf@top=\skip58
+\sf@bottom=\skip59
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2026/03/08 line numbers on paragraphs v5.9
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count303
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+\linenopenalty=\count304
+\output=\toks22
+\linenoprevgraf=\count305
+\linenumbersep=\dimen174
+\linenumberwidth=\dimen175
+\c@linenumber=\count306
+\c@pagewiselinenumber=\count307
+\c@LN@truepage=\count308
+\c@internallinenumber=\count309
+\c@internallinenumbers=\count310
+\quotelinenumbersep=\dimen176
+\bframerule=\dimen177
+\bframesep=\dimen178
+\bframebox=\box57
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2026-02-18 L3 backend support: dvips
+\l__pdfannot_backend_content_box=\box58
+\l__pdfannot_backend_model_box=\box59
+\g__pdfannot_backend_int=\count311
+\g__pdfannot_backend_link_int=\count312
+\g__pdfannot_backend_link_sf_int=\count313
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* hratio: 1:1
+* vratio: 1:1
+* modes: 
+* h-part:(L,W,R)=(64.75394pt, 468.0pt, 64.75394pt)
+* v-part:(T,H,B)=(111.52342pt, 622.0pt, 111.52342pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=468.0pt
+* \textheight=622.0pt
+* \oddsidemargin=-7.51605pt
+* \evensidemargin=-7.51605pt
+* \topmargin=-22.74657pt
+* \headheight=50.0pt
+* \headsep=12.0pt
+* \topskip=11.0pt
+* \footskip=12.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=24.0pt
+* \skip\footins=24.0pt plus 2.0pt minus 12.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+[1
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 123.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 123.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [2] [3]
+
+Package natbib Warning: Citation `boutylineVaisey2017' on page 4 undefined on input line 149.
+
+[4] [5]
+
+Package natbib Warning: Citation `barrat2004architecture' on page 6 undefined on input line 173.
+
+[6] [7] [8] [9] [10] [11] (./main.bbl [12]) [13]
+
+! LaTeX Error: File `genre-behav-typology' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.240 ...idth=1.0\linewidth]{genre-behav-typology}
+                                                  
+? R
+OK, entering \nonstopmode...
+
+! LaTeX Error: File `taste-corrnet-class1' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.250 ...th=0.33\textwidth]{taste-corrnet-class1}}
+                                                  
+I could not locate the file with any of these extensions:
+.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `taste-corrnet-class2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.251 ...th=0.33\textwidth]{taste-corrnet-class2}}
+                                                  
+I could not locate the file with any of these extensions:
+.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `taste-corrnet-class3' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 ...th=0.33\textwidth]{taste-corrnet-class3}}
+                                                   \\
+I could not locate the file with any of these extensions:
+.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `taste-corrnet-class4' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.253 ...th=0.33\textwidth]{taste-corrnet-class4}}
+                                                  
+I could not locate the file with any of these extensions:
+.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `taste-corrnet-class5' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...th=0.33\textwidth]{taste-corrnet-class5}}
+                                                   \\
+I could not locate the file with any of these extensions:
+.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `taste-centrality-class' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.255 ...= 1.0\textwidth]{taste-centrality-class}}
+                                                  
+I could not locate the file with any of these extensions:
+.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Float too large for page by 346.22804pt on input line 259.
+
+
+! LaTeX Error: Cannot determine size of graphic in numlis-by-schematic-class.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 ...extwidth]{numlis-by-schematic-class.png}}
+                                                   \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: numlis-by-schematic-class.png Graphic file (type eps)
+<numlis-by-schematic-class.png>
+
+LaTeX Warning: File `schema-validation1.png' not found on input line 266.
+
+
+! LaTeX Error: File `schema-validation1.png' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.266 ...= 1.0\textwidth]{schema-validation1.png}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Cannot determine size of graphic in schema-validation1.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.266 ...= 1.0\textwidth]{schema-validation1.png}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: schema-validation1.png Graphic file (type eps)
+<schema-validation1.png>
+
+LaTeX Warning: Float too large for page by 381.63414pt on input line 269.
+
+
+Package natbib Warning: There were undefined citations.
+
+[14] [15] [16] (./main.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 5351 strings out of 469159
+ 89092 string characters out of 5459813
+ 508051 words of memory out of 5000000
+ 34309 multiletter control sequences out of 15000+600000
+ 637498 words of font info for 77 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 72i,10n,79p,1561b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.dvi (16 pages, 64752 bytes).

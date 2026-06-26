@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: elsarticle-harv.bst
+Database file #1: main.bib
+Warning--I didn't find a database entry for "boutylineVaisey2017"
+Warning--I didn't find a database entry for "barrat2004architecture"
+Warning--empty title in swidler2005anchors
+You've used 35 entries,
+            2821 wiz_defined-function locations,
+            834 strings with 10156 characters,
+and the built_in function-call counts, 15476 in all, are:
+= -- 1681
+> -- 548
+< -- 33
++ -- 218
+- -- 174
+* -- 1194
+:= -- 2783
+add.period$ -- 106
+call.type$ -- 35
+change.case$ -- 232
+chr.to.int$ -- 34
+cite$ -- 36
+duplicate$ -- 611
+empty$ -- 1188
+format.name$ -- 255
+if$ -- 3180
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 36
+newline$ -- 114
+num.names$ -- 140
+pop$ -- 196
+preamble$ -- 1
+purify$ -- 197
+quote$ -- 0
+skip$ -- 499
+stack$ -- 0
+substring$ -- 1059
+swap$ -- 74
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 303
+warning$ -- 1
+while$ -- 157
+width$ -- 0
+write$ -- 385
+(There were 3 warnings)

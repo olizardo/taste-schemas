@@ -1,0 +1,114 @@
+\begin{thebibliography}{35}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem[{Baldassarri and Goldberg(2014)}]{baldassarri2014neither}
+Baldassarri, D., Goldberg, A., 2014. Neither ideologues nor agnostics: Alternative voters’ belief system in an age of partisan politics. American Journal of Sociology 120~(1), 45--95.
+
+\bibitem[{Baumann(2001)}]{baumann2001intellectualization}
+Baumann, S., 2001. Intellectualization and art world development: Film in the united states. American Sociological Review, 404--426.
+
+\bibitem[{Bourdieu(1990)}]{bourdieu1990logic}
+Bourdieu, P., 1990. The logic of practice. Stanford University Press.
+
+\bibitem[{Boutyline(2016)}]{corclass}
+Boutyline, A., 2016. corclass: Correlational Class Analysis. R package version 0.1.1.
+\newline\urlprefix\url{https://cran.r-project.org/package=corclass}
+
+\bibitem[{Boutyline(2017)}]{boutyline2017improving}
+Boutyline, A., 2017. Improving the measurement of shared cultural schemas with correlational class analysis: Theory and method. Sociological Science 4~(15), 353--393.
+
+\bibitem[{Bryson(1996)}]{bryson1996anything}
+Bryson, B., 1996. " anything but heavy metal": Symbolic exclusion and musical dislikes. American sociological review 61, 884--899.
+
+\bibitem[{Bryson(1997)}]{bryson1997univores}
+Bryson, B., 1997. What about the univores? musical dislikes and group-based identity construction among americans with low levels of education. Poetics 25~(2-3), 141--156.
+
+\bibitem[{Coulangeon(2015)}]{coulangeon2015social}
+Coulangeon, P., 2015. Social mobility and musical tastes: A reappraisal of the social meaning of taste eclecticism. Poetics 51, 54--68.
+
+\bibitem[{Daenekindt(2017)}]{daenekindt2017structure}
+Daenekindt, S., 2017. On the structure of dispositions. transposability of and oppositions between aesthetic dispositions. Poetics 62, 43--52.
+
+\bibitem[{Daenekindt et~al.(2017)Daenekindt, de~Koster, and van~der Waal}]{daenekindt2017people}
+Daenekindt, S., de~Koster, W., van~der Waal, J., 2017. How people organise cultural attitudes: cultural belief systems and the populist radical right. West European Politics 40~(4), 791--811.
+
+\bibitem[{DiMaggio(1997)}]{dimaggio1997culture}
+DiMaggio, P., 1997. Culture and cognition. Annual review of sociology 23~(1), 263--287.
+
+\bibitem[{DiMaggio and Goldberg(2018)}]{dimaggio2018searching}
+DiMaggio, P., Goldberg, A., 2018. Searching for homo economicus: Variation in americans’ construals of and attitudes toward markets. European Journal of Sociology/Archives Europ{\'e}ennes de Sociologie, 1--39.
+
+\bibitem[{DiMaggio et~al.(2017)DiMaggio, Sotoudeh, Goldberg, and Shepherd}]{dimaggio2017culture}
+DiMaggio, P., Sotoudeh, R., Goldberg, A., Shepherd, H., 2017. Culture out of attitudes: Relationality, population heterogeneity and attitudes toward science and religion in the us. Poetics.
+
+\bibitem[{Epskamp et~al.(2012)Epskamp, Cramer, Waldorp, Schmittmann, Borsboom, et~al.}]{epskamp2012qgraph}
+Epskamp, S., Cramer, A.~O., Waldorp, L.~J., Schmittmann, V.~D., Borsboom, D., et~al., 2012. qgraph: Network visualizations of relationships in psychometric data. Journal of Statistical Software 48~(4), 1--18.
+
+\bibitem[{Goldberg(2011)}]{goldberg2011mapping}
+Goldberg, A., 2011. Mapping shared understandings using relational class analysis: The case of the cultural omnivore reexamined. American Journal of Sociology 116~(5), 1397--1436.
+
+\bibitem[{Goldberg and Stein(2018)}]{goldberg2018beyond}
+Goldberg, A., Stein, S.~K., 2018. Beyond “social contagion”: Associative diffusion and the emergence of cultural variation. American Sociological Review 83~(5), 897--932.
+
+\bibitem[{Han(2003)}]{han2003unraveling}
+Han, S.-K., 2003. Unraveling the brow: What and how of choice in musical preference. Sociological Perspectives 46~(4), 435--459.
+
+\bibitem[{Jones(2018)}]{networktools}
+Jones, P., 2018. networktools: Tools for Identifying Important Nodes in Networks. R package version 1.1.1.
+\newline\urlprefix\url{https://CRAN.R-project.org/package=networktools}
+
+\bibitem[{Lena(2012)}]{lena2012banding}
+Lena, J.~C., 2012. Banding together: How communities create genres in popular music. Princeton University Press.
+
+\bibitem[{Lizardo and Skiles(2015)}]{lizardo2015musical}
+Lizardo, O., Skiles, S., 2015. Musical taste and patterns of symbolic exclusion in the united states 1993--2012: Generational dynamics of differentiation and continuity. Poetics 53, 9--21.
+
+\bibitem[{Lizardo and Skiles(2016{\natexlab{a}})}]{lizardo2016cultural}
+Lizardo, O., Skiles, S., 2016{\natexlab{a}}. Cultural objects as prisms: Perceived audience composition of musical genres as a resource for symbolic exclusion. Socius 2, 2378023116641695.
+
+\bibitem[{Lizardo and Skiles(2016{\natexlab{b}})}]{lizardo2016end}
+Lizardo, O., Skiles, S., 2016{\natexlab{b}}. The end of symbolic exclusion? the rise of “categorical tolerance” in the musical tastes of americans: 1993--2012. Sociological Science 3, 85--108.
+
+\bibitem[{Metz-McDonnell et~al.(2018)Metz-McDonnell, Stoltz, and Taylor}]{metzmcDonnell2018multiple}
+Metz-McDonnell, E., Stoltz, D.~S., Taylor, M.~A., 2018. Multiple market moralities: Systematic differences in how consumers judge the fairness of price changes, manuscript under review.
+
+\bibitem[{Okada(2017)}]{okada2017structure}
+Okada, S., 2017. Structure of cultural rejection. Sociological Perspectives 60~(2), 355--377.
+
+\bibitem[{Ollivier(2008)}]{ollivier2008modes}
+Ollivier, M., 2008. Modes of openness to cultural diversity: Humanist, populist, practical, and indifferent. poetics 36~(2-3), 120--147.
+
+\bibitem[{Patterson(2014)}]{patterson2014making}
+Patterson, O., 2014. Making sense of culture. Annual Review of Sociology 40, 1--30.
+
+\bibitem[{Peterson(2013)}]{peterson2013creating}
+Peterson, R.~A., 2013. Creating country music: Fabricating authenticity. University of Chicago Press.
+
+\bibitem[{Robinaugh et~al.(2016)Robinaugh, Millner, and McNally}]{robinaugh2016identifying}
+Robinaugh, D.~J., Millner, A.~J., McNally, R.~J., 2016. Identifying highly influential nodes in the complicated grief network. Journal of abnormal psychology 125~(6), 747.
+
+\bibitem[{Savage and Gayo(2011)}]{savage2011unravelling}
+Savage, M., Gayo, M., 2011. Unravelling the omnivore: A field analysis of contemporary musical taste in the united kingdom. Poetics 39~(5), 337--357.
+
+\bibitem[{Sewell(2004)}]{sewell2004concept}
+Sewell, W.~H., 2004. The concept (s) of culture. In: Practicing history. Routledge, pp. 90--110.
+
+\bibitem[{Strauss and Quinn(1997)}]{strauss1997cognitive}
+Strauss, C., Quinn, N., 1997. A cognitive theory of cultural meaning. Vol.~9. Cambridge University Press.
+
+\bibitem[{Swidler(2005)}]{swidler2005anchors}
+Swidler, A., 2005. In: The practice turn in contemporary theory. Routledge, pp. 83--101.
+
+\bibitem[{Tampubolon(2008)}]{tampubolon2008revisiting}
+Tampubolon, G., 2008. Revisiting omnivores in america circa 1990s: The exclusiveness of omnivores? Poetics 36~(2-3), 243--264.
+
+\bibitem[{Vaisey and Lizardo(2016)}]{vaisey2016cultural}
+Vaisey, S., Lizardo, O., 2016. Cultural fragmentation or acquired dispositions? a new approach to accounting for patterns of cultural change. Socius 2, 2378023116669726.
+
+\bibitem[{Van~Eijck(2001)}]{van2001social}
+Van~Eijck, K., 2001. Social differentiation in musical taste patterns. Social forces 79~(3), 1163--1185.
+
+\end{thebibliography}
