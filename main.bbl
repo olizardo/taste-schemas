@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{33}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -63,9 +63,6 @@ Han, S.-K., 2003. Unraveling the brow: What and how of choice in musical prefere
 Jones, P., 2018. networktools: Tools for Identifying Important Nodes in Networks. R package version 1.1.1.
 \newline\urlprefix\url{https://CRAN.R-project.org/package=networktools}
 
-\bibitem[{Lena(2012)}]{lena2012banding}
-Lena, J.~C., 2012. Banding together: How communities create genres in popular music. Princeton University Press.
-
 \bibitem[{Lizardo and Skiles(2015)}]{lizardo2015musical}
 Lizardo, O., Skiles, S., 2015. Musical taste and patterns of symbolic exclusion in the united states 1993--2012: Generational dynamics of differentiation and continuity. Poetics 53, 9--21.
 
@@ -87,9 +84,6 @@ Ollivier, M., 2008. Modes of openness to cultural diversity: Humanist, populist,
 \bibitem[{Patterson(2014)}]{patterson2014making}
 Patterson, O., 2014. Making sense of culture. Annual Review of Sociology 40, 1--30.
 
-\bibitem[{Peterson(2013)}]{peterson2013creating}
-Peterson, R.~A., 2013. Creating country music: Fabricating authenticity. University of Chicago Press.
-
 \bibitem[{Robinaugh et~al.(2016)Robinaugh, Millner, and McNally}]{robinaugh2016identifying}
 Robinaugh, D.~J., Millner, A.~J., McNally, R.~J., 2016. Identifying highly influential nodes in the complicated grief network. Journal of abnormal psychology 125~(6), 747.
 
@@ -110,8 +104,5 @@ Tampubolon, G., 2008. Revisiting omnivores in america circa 1990s: The exclusive
 
 \bibitem[{Vaisey and Lizardo(2016)}]{vaisey2016cultural}
 Vaisey, S., Lizardo, O., 2016. Cultural fragmentation or acquired dispositions? a new approach to accounting for patterns of cultural change. Socius 2, 2378023116669726.
-
-\bibitem[{Van~Eijck(2001)}]{van2001social}
-Van~Eijck, K., 2001. Social differentiation in musical taste patterns. Social forces 79~(3), 1163--1185.
 
 \end{thebibliography}

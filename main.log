@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.23)  25 JUN 2026 19:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.23)  25 JUN 2026 19:16
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/taste-schemas/main.tex"
-(/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/taste-schemas/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
 (./elsarticle.cls
@@ -245,75 +244,50 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 123.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] (./main.bbl [12]) [13]
-<genre-behav-typology.png, id=59, 1075.01625pt x 921.4425pt>
-File: genre-behav-typology.png Graphic file (type png)
-<use genre-behav-typology.png>
-Package pdftex.def Info: genre-behav-typology.png  used on input line 242.
-(pdftex.def)             Requested size: 468.0pt x 401.14764pt.
-<corr1.png, id=60, 913.4125pt x 913.4125pt>
-File: corr1.png Graphic file (type png)
-<use corr1.png>
-Package pdftex.def Info: corr1.png  used on input line 252.
-(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
-<corr2.png, id=61, 913.4125pt x 913.4125pt>
-File: corr2.png Graphic file (type png)
-<use corr2.png>
-Package pdftex.def Info: corr2.png  used on input line 253.
-(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
-<corr3.png, id=62, 913.4125pt x 913.4125pt>
-File: corr3.png Graphic file (type png)
-<use corr3.png>
-Package pdftex.def Info: corr3.png  used on input line 254.
-(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
-<corr4.png, id=63, 913.4125pt x 913.4125pt>
-File: corr4.png Graphic file (type png)
-<use corr4.png>
-Package pdftex.def Info: corr4.png  used on input line 255.
-(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
-<corr5.png, id=64, 913.4125pt x 913.4125pt>
-File: corr5.png Graphic file (type png)
-<use corr5.png>
-Package pdftex.def Info: corr5.png  used on input line 256.
-(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
-<cent.png, id=65, 867.24pt x 505.89pt>
-File: cent.png Graphic file (type png)
-<use cent.png>
-Package pdftex.def Info: cent.png  used on input line 257.
-(pdftex.def)             Requested size: 468.0pt x 272.99898pt.
+) [2] [3] [4] [5] [6] [7] [8] [9] [10] (./main.bbl [11]) [12]
+<qmd/main-analysis_files/figure-html/ridge-plots-1.png, id=56, 1156.32pt x 289.08pt>
+File: qmd/main-analysis_files/figure-html/ridge-plots-1.png Graphic file (type png)
+<use qmd/main-analysis_files/figure-html/ridge-plots-1.png>
+Package pdftex.def Info: qmd/main-analysis_files/figure-html/ridge-plots-1.png  used on input line 237.
+(pdftex.def)             Requested size: 468.0pt x 116.99734pt.
+<qmd/main-analysis_files/figure-html/network-plots-1.png, id=57, 1156.32pt x 722.7pt>
+File: qmd/main-analysis_files/figure-html/network-plots-1.png Graphic file (type png)
+<use qmd/main-analysis_files/figure-html/network-plots-1.png>
+Package pdftex.def Info: qmd/main-analysis_files/figure-html/network-plots-1.png  used on input line 246.
+(pdftex.def)             Requested size: 468.0pt x 292.4934pt.
+<qmd/main-analysis_files/figure-html/centrality-plots-6.png, id=58, 1156.32pt x 722.7pt>
+File: qmd/main-analysis_files/figure-html/centrality-plots-6.png Graphic file (type png)
+<use qmd/main-analysis_files/figure-html/centrality-plots-6.png>
+Package pdftex.def Info: qmd/main-analysis_files/figure-html/centrality-plots-6.png  used on input line 247.
+(pdftex.def)             Requested size: 468.0pt x 292.4934pt.
 
 
-LaTeX Warning: Float too large for page by 151.05467pt on input line 261.
+LaTeX Warning: Float too large for page by 22.53677pt on input line 250.
 
-<numlis-by-schematic-class.png, id=66, 1382.16376pt x 921.4425pt>
-File: numlis-by-schematic-class.png Graphic file (type png)
-<use numlis-by-schematic-class.png>
-Package pdftex.def Info: numlis-by-schematic-class.png  used on input line 267.
-(pdftex.def)             Requested size: 374.40143pt x 249.59422pt.
-<schema-validation1.png, id=67, 1011.78pt x 433.62pt>
-File: schema-validation1.png Graphic file (type png)
-<use schema-validation1.png>
-Package pdftex.def Info: schema-validation1.png  used on input line 268.
+<qmd/main-analysis_files/figure-html/validation-step-1.png, id=59, 1011.78pt x 433.62pt>
+File: qmd/main-analysis_files/figure-html/validation-step-1.png Graphic file (type png)
+<use qmd/main-analysis_files/figure-html/validation-step-1.png>
+Package pdftex.def Info: qmd/main-analysis_files/figure-html/validation-step-1.png  used on input line 256.
 (pdftex.def)             Requested size: 468.0pt x 200.57257pt.
-[14 <./genre-behav-typology.png (PNG copy)>] [15 <./corr1.png (PNG copy)> <./corr2.png (PNG copy)> <./corr3.png (PNG copy)> <./corr4.png (PNG copy)> <./corr5.png (PNG copy)> <./cent.png>] [16 <./numlis-by-schematic-class.png> <./schema-validation1.png (PNG copy)>] (./main.aux)
+[13 <./qmd/main-analysis_files/figure-html/ridge-plots-1.png>] [14 <./qmd/main-analysis_files/figure-html/network-plots-1.png (PNG copy)> <./qmd/main-analysis_files/figure-html/centrality-plots-6.png>] [15 <./qmd/main-analysis_files/figure-html/validation-step-1.png (PNG copy)>] (./main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5460 strings out of 469158
- 89435 string characters out of 5459787
- 509532 words of memory out of 5000000
- 34411 multiletter control sequences out of 15000+600000
- 637498 words of font info for 77 fonts, out of 8000000 for 9000
+ 5388 strings out of 469158
+ 89058 string characters out of 5459787
+ 509451 words of memory out of 5000000
+ 34340 multiletter control sequences out of 15000+600000
+ 637531 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,10n,79p,1626b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (16 pages, 1236935 bytes).
+ 72i,6n,79p,1561b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/omarlizardo/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (15 pages, 2567513 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

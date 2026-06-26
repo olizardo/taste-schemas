@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: elsarticle-harv.bst
 Database file #1: main.bib
 Warning--empty title in swidler2005anchors
-You've used 36 entries,
+You've used 33 entries,
             2821 wiz_defined-function locations,
-            839 strings with 10338 characters,
-and the built_in function-call counts, 16070 in all, are:
-= -- 1741
-> -- 583
-< -- 33
-+ -- 233
-- -- 186
-* -- 1252
-:= -- 2888
-add.period$ -- 109
-call.type$ -- 36
-change.case$ -- 241
-chr.to.int$ -- 35
-cite$ -- 37
-duplicate$ -- 629
-empty$ -- 1225
-format.name$ -- 270
-if$ -- 3296
+            823 strings with 9960 characters,
+and the built_in function-call counts, 14963 in all, are:
+= -- 1625
+> -- 553
+< -- 30
++ -- 221
+- -- 177
+* -- 1183
+:= -- 2682
+add.period$ -- 100
+call.type$ -- 33
+change.case$ -- 225
+chr.to.int$ -- 32
+cite$ -- 34
+duplicate$ -- 581
+empty$ -- 1124
+format.name$ -- 258
+if$ -- 3061
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 37
-newline$ -- 117
-num.names$ -- 144
-pop$ -- 204
+missing$ -- 32
+newline$ -- 108
+num.names$ -- 132
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 205
+purify$ -- 190
 quote$ -- 0
-skip$ -- 512
+skip$ -- 470
 stack$ -- 0
-substring$ -- 1103
-swap$ -- 76
+substring$ -- 1039
+swap$ -- 73
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 312
+type$ -- 291
 warning$ -- 1
-while$ -- 162
+while$ -- 151
 width$ -- 0
-write$ -- 396
+write$ -- 365
 (There was 1 warning)
