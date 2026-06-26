@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=latex 2026.6.23)  25 JUN 2026 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.23)  25 JUN 2026 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -37,9 +37,9 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 ) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 106.
- (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2025/01/21 v3.2a Graphics/color driver for dvips
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen152
 \Gin@req@width=\dimen153
@@ -169,13 +169,9 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 \bframerule=\dimen177
 \bframesep=\dimen178
 \bframebox=\box57
-) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-File: l3backend-dvips.def 2026-02-18 L3 backend support: dvips
-\l__pdfannot_backend_content_box=\box58
-\l__pdfannot_backend_model_box=\box59
-\g__pdfannot_backend_int=\count311
-\g__pdfannot_backend_link_int=\count312
-\g__pdfannot_backend_link_sf_int=\count313
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count311
 ) (./main.aux)
 \openout1 = `main.aux'.
 
@@ -193,11 +189,16 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
-
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -235,7 +236,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 [1
 
-]
+{/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 123.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -243,175 +244,75 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 123.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3]
-
-Package natbib Warning: Citation `boutylineVaisey2017' on page 4 undefined on input line 149.
-
-[4] [5]
-
-Package natbib Warning: Citation `barrat2004architecture' on page 6 undefined on input line 173.
-
-[6] [7] [8] [9] [10] [11] (./main.bbl [12]) [13]
-
-! LaTeX Error: File `genre-behav-typology' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.240 ...idth=1.0\linewidth]{genre-behav-typology}
-                                                  
-? R
-OK, entering \nonstopmode...
-
-! LaTeX Error: File `taste-corrnet-class1' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 ...th=0.33\textwidth]{taste-corrnet-class1}}
-                                                  
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `taste-corrnet-class2' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.251 ...th=0.33\textwidth]{taste-corrnet-class2}}
-                                                  
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+) [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] (./main.bbl [12]) [13]
+<genre-behav-typology.png, id=59, 1075.01625pt x 921.4425pt>
+File: genre-behav-typology.png Graphic file (type png)
+<use genre-behav-typology.png>
+Package pdftex.def Info: genre-behav-typology.png  used on input line 242.
+(pdftex.def)             Requested size: 468.0pt x 401.14764pt.
+<corr1.png, id=60, 913.4125pt x 913.4125pt>
+File: corr1.png Graphic file (type png)
+<use corr1.png>
+Package pdftex.def Info: corr1.png  used on input line 252.
+(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
+<corr2.png, id=61, 913.4125pt x 913.4125pt>
+File: corr2.png Graphic file (type png)
+<use corr2.png>
+Package pdftex.def Info: corr2.png  used on input line 253.
+(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
+<corr3.png, id=62, 913.4125pt x 913.4125pt>
+File: corr3.png Graphic file (type png)
+<use corr3.png>
+Package pdftex.def Info: corr3.png  used on input line 254.
+(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
+<corr4.png, id=63, 913.4125pt x 913.4125pt>
+File: corr4.png Graphic file (type png)
+<use corr4.png>
+Package pdftex.def Info: corr4.png  used on input line 255.
+(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
+<corr5.png, id=64, 913.4125pt x 913.4125pt>
+File: corr5.png Graphic file (type png)
+<use corr5.png>
+Package pdftex.def Info: corr5.png  used on input line 256.
+(pdftex.def)             Requested size: 154.44086pt x 154.42787pt.
+<cent.png, id=65, 867.24pt x 505.89pt>
+File: cent.png Graphic file (type png)
+<use cent.png>
+Package pdftex.def Info: cent.png  used on input line 257.
+(pdftex.def)             Requested size: 468.0pt x 272.99898pt.
 
 
-! LaTeX Error: File `taste-corrnet-class3' not found.
+LaTeX Warning: Float too large for page by 151.05467pt on input line 261.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ...th=0.33\textwidth]{taste-corrnet-class3}}
-                                                   \\
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `taste-corrnet-class4' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.253 ...th=0.33\textwidth]{taste-corrnet-class4}}
-                                                  
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `taste-corrnet-class5' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.254 ...th=0.33\textwidth]{taste-corrnet-class5}}
-                                                   \\
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `taste-centrality-class' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.255 ...= 1.0\textwidth]{taste-centrality-class}}
-                                                  
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Float too large for page by 346.22804pt on input line 259.
-
-
-! LaTeX Error: Cannot determine size of graphic in numlis-by-schematic-class.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.265 ...extwidth]{numlis-by-schematic-class.png}}
-                                                   \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: numlis-by-schematic-class.png Graphic file (type eps)
-<numlis-by-schematic-class.png>
-
-LaTeX Warning: File `schema-validation1.png' not found on input line 266.
-
-
-! LaTeX Error: File `schema-validation1.png' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.266 ...= 1.0\textwidth]{schema-validation1.png}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Cannot determine size of graphic in schema-validation1.png (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.266 ...= 1.0\textwidth]{schema-validation1.png}}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: schema-validation1.png Graphic file (type eps)
-<schema-validation1.png>
-
-LaTeX Warning: Float too large for page by 381.63414pt on input line 269.
-
-
-Package natbib Warning: There were undefined citations.
-
-[14] [15] [16] (./main.aux)
+<numlis-by-schematic-class.png, id=66, 1382.16376pt x 921.4425pt>
+File: numlis-by-schematic-class.png Graphic file (type png)
+<use numlis-by-schematic-class.png>
+Package pdftex.def Info: numlis-by-schematic-class.png  used on input line 267.
+(pdftex.def)             Requested size: 374.40143pt x 249.59422pt.
+<schema-validation1.png, id=67, 1011.78pt x 433.62pt>
+File: schema-validation1.png Graphic file (type png)
+<use schema-validation1.png>
+Package pdftex.def Info: schema-validation1.png  used on input line 268.
+(pdftex.def)             Requested size: 468.0pt x 200.57257pt.
+[14 <./genre-behav-typology.png (PNG copy)>] [15 <./corr1.png (PNG copy)> <./corr2.png (PNG copy)> <./corr3.png (PNG copy)> <./corr4.png (PNG copy)> <./corr5.png (PNG copy)> <./cent.png>] [16 <./numlis-by-schematic-class.png> <./schema-validation1.png (PNG copy)>] (./main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5351 strings out of 469159
- 89092 string characters out of 5459813
- 508051 words of memory out of 5000000
- 34309 multiletter control sequences out of 15000+600000
+ 5459 strings out of 469158
+ 89246 string characters out of 5459787
+ 509532 words of memory out of 5000000
+ 34411 multiletter control sequences out of 15000+600000
  637498 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,10n,79p,1561b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (16 pages, 1236935 bytes).
+PDF statistics:
+ 152 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on main.dvi (16 pages, 64752 bytes).

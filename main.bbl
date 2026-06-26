@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -6,6 +6,9 @@
 
 \bibitem[{Baldassarri and Goldberg(2014)}]{baldassarri2014neither}
 Baldassarri, D., Goldberg, A., 2014. Neither ideologues nor agnostics: Alternative voters’ belief system in an age of partisan politics. American Journal of Sociology 120~(1), 45--95.
+
+\bibitem[{Barrat et~al.(2004)Barrat, Barthelemy, Pastor-Satorras, and Vespignani}]{barrat2004architecture}
+Barrat, A., Barthelemy, M., Pastor-Satorras, R., Vespignani, A., 2004. The architecture of complex weighted networks. Proceedings of the national academy of sciences 101~(11), 3747--3752.
 
 \bibitem[{Baumann(2001)}]{baumann2001intellectualization}
 Baumann, S., 2001. Intellectualization and art world development: Film in the united states. American Sociological Review, 404--426.
